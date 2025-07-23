@@ -18,7 +18,7 @@ export default function Home() {
       <Hero
         title="Imo State Ministry of Budget, Economic Planning & Statistics" 
         caption="Empowering Imo’s Growth Through Strategic Planning and Sustainable Development." 
-        subtitle="TThe Ministry of Budget, Economic Planning, and Statistics serves as the economic backbone of Imo State, guiding inclusive growth, data-driven decisions, and coordinated development planning." 
+        subtitle="The Ministry of Budget, Economic Planning, and Statistics serves as the economic backbone of Imo State, guiding inclusive growth, data-driven decisions, and coordinated development planning." 
       />
       <AboutSection 
         title="About Us"
