@@ -19,8 +19,8 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
                 <Title label={title}/>
                 <h2 className="text-xl md:text-3xl lg:text-[43px] font-bold text-white leading-tight mb-4">
                     Our Mandate —<br/>
-                    Ministry of Budget, Economic Planning
-                    <span className="text-green-400"> & Statistics</span>
+                    Ministry of Budget, Economic <br className="hidden md:block"/>
+                    <span className="text-green-400"> Planning & Statistics</span>
                 </h2>
             </div>
             <div className="relative rounded-lg overflow-hidden w-full md:w-[70%] h-[180px] md:h-[280px] md:hidden">
