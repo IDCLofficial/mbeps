@@ -19,22 +19,22 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
                 <Title label={title}/>
                 <h2 className="text-xl md:text-3xl lg:text-[43px] font-bold text-white leading-tight mb-4">
                     Our Mandate —<br/>
-                    Ministry of Budget, Economic Planning <br className="hidden md:block" />
-                    <span className="text-green-400">& Statistics</span>
+                    Ministry of Budget, Economic Planning
+                    <span className="text-green-400"> & Statistics</span>
                 </h2>
             </div>
             <div className="relative rounded-lg overflow-hidden w-full md:w-[70%] h-[180px] md:h-[280px] md:hidden">
               <Image src={image1} alt="Mandate 1" fill className="object-cover" />
             </div>
             <div className="w-full md:w-auto">
-                <p className="text-gray-200 text-xs md:text-[16px] mb-6 max-w-lg text-justify">
+                <p className="text-gray-200 text-[1rem] mb-6 max-w-lg text-justify">
                     {subtitle}
                 </p>
                 <AppLink href="/about" label="Learn More" variant="secondary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium"/>
             </div>
         </div>
         {/* Right: Images */}
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full justify-center">
+        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full justify-start">
           <div className="relative rounded-lg overflow-hidden w-full md:w-[70%] h-[180px] md:h-[280px] max-md:hidden">
             <Image src={image1} alt="Mandate 1" fill className="object-cover" />
           </div>
