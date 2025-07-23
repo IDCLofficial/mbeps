@@ -40,7 +40,7 @@ export const ObjectivesSection = () => {
                 {/* IMDEEG's Objectives */}
                 <div className="mb-12 md:mb-16">
                     <h2 className="text-xl md:text-[43px] font-medium text-center mb-8 md:mb-12">
-                        IMDEEG&apos;s objectives
+                        MBEPS objectives
                     </h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8">
                         {objectives.map((objective, index) => (

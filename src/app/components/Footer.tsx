@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const info = {
     logo: "/logo.png",
-    ministry: "Digital Economy & E-Government",
+    ministry: "Budget, Economic Planning & Statistics",
     description: "The Imo State Ministry of Budget, Economic Planning & Statistics is dedicated to driving sustainable development and inclusive growth in Imo State. The ministry leads the formulation of transparent budgets, strategic economic plans, and reliable statistical data to guide policy decisions, ensure fiscal responsibility, and improve the quality of life for all citizens.",
     quickLinks: [
         {
@@ -47,11 +47,11 @@ const info = {
             href: "/"
         },
         {
-            label: "Info@imdeeg.im.gov.ng",
+            label: "Info@mbeps.im.gov.ng",
             href: "/"
         },  
         {
-            label: "28 Egbu Road, Owerri, Imo State",
+            label: "Block 6, 3rd floor, State Secretarait, Port Harcourt Road , Owerri",
             href: "/"
         },
     ]
