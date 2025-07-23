@@ -16,7 +16,7 @@ export const AboutSection = ({ aboutText, imgSrc, altText }: AboutSectionProps) 
                         <h2 className="text-xl md:text-[43px] font-medium text-black mb-4 md:mb-8">
                             About the Ministry
                         </h2>
-                        <p className="text-dark-primary-body text-sm md:text-[1rem] leading-7 md:leading-8">
+                        <p className="text-dark-primary-body text-[1rem] leading-7 md:leading-8">
                             {aboutText}
                         </p>
                     </div>
