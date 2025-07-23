@@ -38,7 +38,7 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
           <div className="relative rounded-lg overflow-hidden w-full md:w-[70%] h-[180px] md:h-[280px] max-md:hidden">
             <Image src={image1} alt="Mandate 1" fill className="object-cover" />
           </div>
-          <div className="relative rounded-lg overflow-hidden w-full md:w-[335px] h-[180px] md:h-[280px] flex items-center justify-center">
+          <div className="relative rounded-lg overflow-hidden w-full md:w-[30%] h-[180px] md:h-[280px] flex items-center justify-center">
             <Image src={image2} alt="Mandate 2" fill className="object-cover" />
           </div>
         </div>
