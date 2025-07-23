@@ -14,7 +14,7 @@ export const Navbar = ({ onOpenSidebar }: NavbarProps) => {
                     <Image src='/logo.png' alt="Imo State Logo" width={40} height={40} />
                     <span className="font-semibold text-sm text-white leading-tight">
                     Imo State Ministry<br />
-                    of Budget, Economic Planning and<br />
+                    of Budget, Economic Planning and
                     Statistics
                     </span>
                 </div>
