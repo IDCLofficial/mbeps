@@ -15,7 +15,7 @@ const contactInfo = {
 
 const ContactInfoSection = () => (
   <div className="mb-8 md:mb-0">
-    <p className="mb-4 text-[#151A21] text-[1rem]">Have questions, proposals, or feedback? We're here to support you on your digital journey. Reach out through any of the channels below.</p>
+    <p className="mb-4 text-[#151A21] text-[1rem]">Have questions, proposals, or feedback? We&apos;re here to support you on your digital journey. Reach out through any of the channels below.</p>
     <h2 className="text-xl font-bold mb-2">Contact Us</h2>
     <ul className="space-y-2 mb-4">
       <li className="flex items-start gap-2 text-[#151A21]"><FaMapMarkerAlt className="mt-1" /> <span>{contactInfo.address}</span></li>

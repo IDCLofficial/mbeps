@@ -9,6 +9,11 @@ interface MediaSearchBarProps {
 
 const MediaSearchBar: React.FC<MediaSearchBarProps> = ({ placeholder = "Search", onSearch }) => {
   const [query, setQuery] = useState("");
+  // The error is likely due to passing an event handler (onSearch) from a server component to this client component.
+  // To debug, let's add a console.log to see when the component renders and when handleSubmit is called.
+  React.useEffect(() => {
+    console.log("MediaSearchBar mounted. onSearch prop:", typeof onSearch);
+  }, [onSearch]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

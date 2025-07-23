@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import SearchBar from "../components/SearchBar";
 
@@ -19,6 +21,9 @@ const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle, ba
         <p className="text-white text-lg md:text-[16px] max-w-2xl drop-shadow-lg">{subtitle}</p>
         <SearchBar
           placeholder="Search"
+          value=""
+          onChange={() => {}}
+          onSearch={() => {}}
         />
       </div>
     </section>

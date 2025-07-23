@@ -1,13 +1,18 @@
 "use client"
-import Image from "next/image";
+
 import SearchBar from "../components/SearchBar";
 import { useState } from "react";
 import newsList from "./newsList";
 import Link from "next/link";
 
+interface News {
+  title: string;
+  date: string;
+}
+
 export default function NewsHeroSection() {
   const [searchQuery, setSearchQuery] = useState("");
-  const [results, setResults] = useState<any[]>([]);
+  const [results, setResults] = useState<News[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {

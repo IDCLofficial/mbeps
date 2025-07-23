@@ -48,7 +48,7 @@ export default function Stats() {
   useEffect(() => {
     const section = sectionRef.current;
     if (!section) return;
-    let observer: IntersectionObserver;
+    // let observer: IntersectionObserver;
     let didAnimate = false;
 
     function startAnimation() {
@@ -75,7 +75,7 @@ export default function Stats() {
       });
     }
 
-    observer = new window.IntersectionObserver(
+    const observer = new window.IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
           startAnimation();
@@ -84,6 +84,7 @@ export default function Stats() {
       { threshold: 0.3 }
     );
     observer.observe(section);
+
     return () => {
       if (observer && section) observer.unobserve(section);
     };

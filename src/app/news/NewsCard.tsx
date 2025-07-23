@@ -1,7 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function NewsCard({ news }: { news: any }) {
+interface NewsCardProps {
+  news: {
+    img: string;
+    title: string;
+    badge: string;
+    desc: string;
+    date: string;
+    // Add other fields as needed
+  };
+}
+
+export default function NewsCard({ news }: NewsCardProps) {
   return (
     <Link href={`/news/1`} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col">
       <div className="relative w-full h-48">

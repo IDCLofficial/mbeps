@@ -1,6 +1,6 @@
-# Ministry of Finance Web App
+# Mbeps Web App
 
-This project is a modern, modular web application built with [Next.js](https://nextjs.org), TypeScript, and Tailwind CSS. It is designed for the Imo State Ministry of Finance, providing a comprehensive digital platform for transparent governance, accountable finance, and sustainable growth.
+This project is a modern, modular web application built with [Next.js](https://nextjs.org), TypeScript, and Tailwind CSS. It is designed to provide a comprehensive digital platform for [INSERT PURPOSE/ORGANIZATION HERE].
 
 ## Table of Contents
 - [Features](#features)
@@ -16,100 +16,72 @@ This project is a modern, modular web application built with [Next.js](https://n
 - **React 19** with the latest features and performance improvements
 - **TypeScript** for type safety and maintainability
 - **Tailwind CSS 4** for rapid, utility-first styling
-- **Custom Satoshi font family** for consistent branding
-- **Responsive, fixed navigation bar** with backdrop blur effect
-- **Hero section** with dynamic background images and gradient overlays
-- **Interactive statistics display** showcasing ministry achievements
-- **Featured partners section** with partner logos and branding
-- **Latest news and media sections** for content management
-- **Call-to-action sections** for user engagement
-- **Footer with ministry information** and contact details
-- **Advertisement and quick links components** for enhanced user experience
+- **Custom font family** for consistent branding
+- **Responsive, fixed navigation bar**
+- **Hero section** with dynamic background images and overlays
+- **Interactive statistics display**
+- **Featured partners section**
+- **Latest news and media sections**
+- **Call-to-action sections**
+- **Footer with information and contact details**
+- **Advertisement and quick links components**
 
 ## Project Structure
 ```
-/mof
+/[project-root]
   /src
     /app
       /about-us          # About Us page
       /contact-us        # Contact Us page
-      /events           # Events page
-      /media            # Media page
-      /news             # News page
-      /projects         # Projects page
-      /units            # Units page
-      layout.tsx        # Root layout with navigation
-      page.tsx          # Home page
-      globals.css       # Global styles
+      /events            # Events page
+      /media             # Media page
+      /news              # News page
+      /projects          # Projects page
+      /units             # Units page
+      layout.tsx         # Root layout with navigation
+      page.tsx           # Home page
+      globals.css        # Global styles
     /components
-      AboutCommisioner.tsx    # Commissioner information component
-      AboutSection.tsx        # About section with images
-      Advertisement.tsx       # Advertisement component
-      AppLink.tsx            # Customizable link component
-      CTABlock.tsx           # Call-to-action block
-      CTASection.tsx         # Call-to-action section
-      FeaturedPartners.tsx   # Partner logos display
-      Footer.tsx             # Footer component
-      Hero.tsx              # Hero section with background
-      LatestNews.tsx         # Latest news component
-      Navbar.tsx            # Fixed navigation bar
-      NavLinks.tsx          # Navigation links
-      QuickLinks.tsx        # Quick links component
-      Stats.tsx             # Statistics display
-      Title.tsx             # Styled title component
+      [Component files here]
     /fonts
-      /satoshi-cdnfonts     # Custom Satoshi font family
-        Satoshi-Regular.otf
-        Satoshi-Medium.otf
-        Satoshi-Bold.otf
-        Satoshi-Italic.otf
-        ... (other weights)
+      [Custom font files here]
   /public
-    /images               # Image assets
-      heroImage.png       # Hero background
-      homeImage1.png      # About section images
-      homeImage2.png
-      commissioner.png    # Commissioner photo
-      advert_flier.png   # Advertisement assets
-      # Partner logos
-      huawei.png
-      cisco.png
-      microsoft.png
-      # ... other partner logos
+    /images              # Image assets
+      [Image files here]
 ```
 
 ### Main Pages
-- **Home** (`/`) - Landing page with hero, about, stats, and partners
-- **About Us** (`/about-us`) - Detailed ministry information
-- **Projects** (`/projects`) - Ministry projects showcase
+- **Home** (`/`) - Landing page
+- **About Us** (`/about-us`) - Information page
+- **Projects** (`/projects`) - Projects showcase
 - **News** (`/news`) - Latest news and updates
-- **Units** (`/units`) - Ministry units and departments
-- **Events** (`/events`) - Upcoming and past events
-- **Media** (`/media`) - Media resources and downloads
+- **Units** (`/units`) - Units and departments
+- **Events** (`/events`) - Events
+- **Media** (`/media`) - Media resources
 - **Contact Us** (`/contact-us`) - Contact information and form
 
 ## Components
 
 ### Core Components
-- **Hero**: Full-screen hero section with dynamic background, gradient overlay, and compelling copy
-- **Navbar**: Fixed header with logo and navigation, featuring backdrop blur effect
-- **NavLinks**: Responsive navigation links for all main pages
-- **AppLink**: Customizable link component supporting variants and sizes
-- **Title**: Styled title component for consistent headings
+- **Hero**: Full-screen hero section
+- **Navbar**: Fixed header with logo and navigation
+- **NavLinks**: Responsive navigation links
+- **AppLink**: Customizable link component
+- **Title**: Styled title component
 
 ### Content Components
-- **AboutSection**: Two-column layout with images and descriptive text
-- **AboutCommisioner**: Commissioner profile with image and information
-- **Stats**: Achievement statistics with animated counters
-- **FeaturedPartners**: Partner logos in a responsive grid layout
-- **LatestNews**: News feed component with latest updates
-- **QuickLinks**: Quick access links for common tasks
+- **AboutSection**: Layout with images and descriptive text
+- **AboutCommissioner**: Profile component (customize as needed)
+- **Stats**: Achievement statistics
+- **FeaturedPartners**: Partner logos grid
+- **LatestNews**: News feed component
+- **QuickLinks**: Quick access links
 - **Advertisement**: Promotional content display
 
 ### Layout Components
-- **CTASection**: Call-to-action section for user engagement
+- **CTASection**: Call-to-action section
 - **CTABlock**: Individual call-to-action blocks
-- **Footer**: Comprehensive footer with ministry information, links, and contact details
+- **Footer**: Footer with information, links, and contact details
 
 ## Getting Started
 
@@ -149,17 +121,16 @@ This project is a modern, modular web application built with [Next.js](https://n
 
 ## Key Features Implemented
 
-### Ministry-Specific Content
-- **Transparent Governance**: Focus on accountability and transparency in financial management
-- **Sustainable Growth**: Emphasis on economic development and fiscal responsibility
-- **Digital Transformation**: Integration of modern technology for efficient service delivery
-- **Partner Ecosystem**: Showcase of strategic partnerships with technology companies
+### [INSERT ORGANIZATION/PROJECT-SPECIFIC CONTENT HERE]
+- **[Feature 1]**: [Description]
+- **[Feature 2]**: [Description]
+- **[Feature 3]**: [Description]
 
 ### Technical Highlights
-- **Performance Optimized**: Built with Next.js 15 and React 19 for optimal performance
+- **Performance Optimized**: Built with Next.js 15 and React 19
 - **Responsive Design**: Mobile-first approach with Tailwind CSS 4
-- **Type Safety**: Full TypeScript implementation for robust development
-- **Modern Styling**: Custom Satoshi font and professional design system
+- **Type Safety**: Full TypeScript implementation
+- **Modern Styling**: Custom font and design system
 - **SEO Ready**: Optimized metadata and structured content
 
 ## Deployment
@@ -175,6 +146,4 @@ For more details, see the [Next.js deployment documentation](https://nextjs.org/
 
 ---
 
-_This project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) and customized for the Imo State Ministry of Finance, focusing on transparent governance and sustainable economic growth._
-
-# IMDEEG
+_This project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) and customized for [INSERT ORGANIZATION/PROJECT NAME], focusing on [INSERT FOCUS/GOAL]._
