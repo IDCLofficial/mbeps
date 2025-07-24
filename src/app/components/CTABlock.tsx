@@ -21,7 +21,8 @@ export default function CTABlock({ heading, subtext, buttonLabel, buttonHref }: 
             href={buttonHref} 
             label={buttonLabel} 
             variant="primary" 
-            className="w-full md:w-auto max-w-xs text-base md:text-lg px-6 py-2 rounded font-medium flex justify-center"
+            className="w-full md:w-auto max-w-xs text-base md:text-lg px-6 py-2 rounded font-medium flex justify-center
+            hover:bg-primary-green/80 hover:text-white transition-all duration-300"
           />
         </div>
       </div>

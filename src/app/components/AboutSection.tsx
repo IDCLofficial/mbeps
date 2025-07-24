@@ -33,7 +33,8 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
                   <p className="text-gray-200 text-[1rem] mb-6 max-w-lg text-justify">
                       {subtitle}
                   </p>
-                  <AppLink href="/about-us" label="Learn More" variant="secondary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium"/>
+                  <AppLink href="/about-us" label="Learn More" variant="secondary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium
+                  hover:bg-primary-green/80 hover:text-white transition-all duration-300"/>
               </div>
           </div>
         </PageTransition>

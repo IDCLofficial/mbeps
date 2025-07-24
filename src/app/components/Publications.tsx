@@ -3,28 +3,28 @@ import { AppLink } from "./AppLink";
 
 const links = [
   {
-    title: "Youth Empowerment",
-    desc: "Explore our comprehensive range of services.",
-    img: "/images/homeImage1.jpg",
+    title: "2024/2025 Budget",
+    desc: "Click the button below to download the 2024/2025 Budget.",
+    img: "/images/documents/bill.jpg",
     href: "/initiatives/youth-empowerment"
   },
   {
-    title: "Talent Hunt",
-    desc: "Discover our impactful initiatives.",
-    img: "/images/homeImage3.jpg",
-    href: "/initiatives/talent-hunt"
-  },    
-  {
-    title: "Youth Civic Engagement",
-    desc: "Stay updated with the latest news.",
-    img: "/images/homeImage2.jpg",
-    href: "/initiatives/youth-civic-engagement"
+    title: "2025 Citizens’ Budget (English)",
+    desc: "Download the 2025 Citizens’ Budget in English for a detailed overview of state allocations and priorities.",
+    img: "/images/documents/bill.jpg",
+    href: "/documents/2025-citizens-budget-en.pdf"
   },
   {
-    title: "Local Youth Development Officers (YDOs)",
-    desc: "Who we are and what we stand for.",
-    img: "/images/gradient.png",
-    href: "/initiatives/YDOs"
+    title: "2025 Citizens’ Budget (Igbo)",
+    desc: "Access the 2025 Citizens’ Budget translated into Igbo for inclusive and transparent governance.",
+    img: "/images/documents/bill.jpg",
+    href: "/documents/2025-citizens-budget-igbo.pdf"
+  },
+  {
+    title: "2024 Budget Performance Report",
+    desc: "Review the 2024 Budget Performance Report to see how funds were allocated and utilized.",
+    img: "/images/documents/bill.jpg",
+    href: "/documents/2024-budget-performance-report.pdf"
   },
 ];
 
