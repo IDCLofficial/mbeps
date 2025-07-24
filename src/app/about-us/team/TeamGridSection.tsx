@@ -13,7 +13,7 @@ interface TeamGridSectionProps {
 
 const TeamGridSection: React.FC<TeamGridSectionProps> = ({ members }) => {
   return (
-    <section className="w-full py-10 md:py-16 px-2 md:px-4 bg-white mx-auto">
+    <section className="w-full py-10 md:py-16 px-2 md:px-4 bg-white mx-auto" id="team">
       <h2 className="text-xl md:text-3xl lg:text-[43px] font-medium text-center mb-6 md:mb-10 text-dark-primary">Our Team</h2>
       <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-10">
         {members.map((member, idx) => (

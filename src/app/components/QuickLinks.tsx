@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const links = [
   {
-    title: "Services",
-    desc: "Explore our comprehensive range of services.",
+    title: "Departments",
+    desc: "Explore our departments.",
     img: "/images/homeImage1.jpg",
-    href: "/services"
+    href: "/departments"
   },
   {
     title: "Projects",
@@ -20,10 +20,10 @@ const links = [
     href: "/news"
   },
   {
-    title: "About Us",
-    desc: "Who we are and what we stand for.",
+    title: "Events",
+    desc: "Check out our upcoming events.",
     img: "/images/gradient.png",
-    href: "/about-us"
+    href: "/events"
   },
 ];
 

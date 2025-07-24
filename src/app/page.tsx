@@ -11,14 +11,16 @@ import Stats from "@/app/components/Stats";
 import CTASection from "@/app/components/CTASection";
 import Footer from "@/app/components/Footer";
 import Advertisement from "@/app/components/Advertisement";
+import Publications from "./components/Publications";
+import { Departments } from "./components/Departments";
 
 export default function Home() {
   return (
-    <div className="h-screen w-full bg-red-400">
+    <div className="h-screen w-full">
       <Hero
-        title="Imo State Ministry of Budget, Economic Planning & Statistics" 
-        caption="Empowering Imo’s Growth Through Strategic Planning and Sustainable Development." 
-        subtitle="The Ministry of Budget, Economic Planning, and Statistics serves as the economic backbone of Imo State, guiding inclusive growth, data-driven decisions, and coordinated development planning." 
+        // title="Imo State Ministry of Budget, Economic Planning & Statistics" 
+        // caption="Empowering Imo’s Growth Through Strategic Planning and Sustainable Development." 
+        // subtitle="The Ministry of Budget, Economic Planning, and Statistics serves as the economic backbone of Imo State, guiding inclusive growth, data-driven decisions, and coordinated development planning." 
       />
       <AboutSection 
         title="About Us"
@@ -30,8 +32,10 @@ export default function Home() {
         imgSrc="/images/commissioner.png" 
         title="About The Commissioner" 
       />
-      <section className="w-full flex flex-col gap-8">
+      <Departments />
+      <section className="w-full flex flex-col gap-2">
         <QuickLinks />
+        <Publications />
         {/* <Advertisement /> */}
         <LatestNews />
       </section>
