@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FadeUpTransition } from "../components/PageTransition";
 import { SubsequentHero } from "../components/Hero";
 import MediaSearchBar from "./MediaSearchBar";
+import SearchBar from "../components/SearchBar";
 
 interface MediaHeroSectionProps {
   title: string;
@@ -15,9 +16,10 @@ interface MediaHeroSectionProps {
 const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle, backgroundImage }) => {
   const [query, setQuery] = useState("");
 
-  const handleSearch = (searchQuery: string) => {
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     // Implement your search logic here (e.g., filter media, update state, etc.)
-    alert(`Searching for: ${searchQuery}`);
+    alert(`Searching for: ${query}`);
   };
 
   return (
@@ -29,10 +31,7 @@ const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle, ba
         <FadeUpTransition transition={{ delay: 0.15 }}>
           <p className="text-white text-lg md:text-[16px] max-w-2xl drop-shadow-lg">{subtitle}</p>
         </FadeUpTransition>
-        <MediaSearchBar
-          placeholder="Search"
-          onSearch={handleSearch}
-        />
+        <SearchBar placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value) } onSearch={handleSearch} />
       </div>
     </SubsequentHero>
   );
