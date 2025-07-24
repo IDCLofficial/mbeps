@@ -5,26 +5,34 @@ import { CommissionerSection } from "./CommissionerSection";
 import { StructuresSection } from "./StructuresSection";
 import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
+import { MVSSection } from "./MVSSection";
+import TeamGridSection from "./team/TeamGridSection";
+import { AppLink } from "../components/AppLink";
+
+const teamMembers = Array(4).fill({
+    name: "Magreth Nonso",
+    position: "Position",
+    imgSrc: "/images/team.png" // Use a placeholder or real image if available
+  });
 
 export default function AboutUs() {
     return (
         <div className="h-screen">
-            <AboutUsHero ministryName="Ministry of Budget, Economic Planning & Statistics" />
+            <AboutUsHero ministryName="Ministry of Budget, Economic Planning & Statistics"/>
             <AboutSection 
-                aboutText="The Imo State Ministry of Budget, Economic Planning & Statistics is the driving force behind the state’s sustainable development and economic transformation. Our mission is to formulate transparent budgets, develop strategic economic plans, and provide reliable statistical data to guide policy decisions and resource allocation. We are committed to fostering inclusive growth, ensuring fiscal responsibility, and enhancing the quality of life for all citizens of Imo State. Through collaboration, innovation, and data-driven strategies, the ministry leads efforts to build a resilient economy, empower communities, and create opportunities for present and future generations."
+                aboutText="The Imo State Ministry of Budget, Economic Planning and Statistics plays a critical role in shaping the economic direction of the state. Our core mandate is to drive inclusive and sustainable development by coordinating strategic planning, formulating state budgets, monitoring and evaluating government projects, and producing accurate data for evidence-based decision-making. We work closely with local and international partners to align our development goals with global best practices."
                 imgSrc="/images/homeImage1.jpg" 
                 altText="Ministry of Budget, Economic Planning and Statistics conference event" 
             />
-            <CommissionerSection 
-                imgSrc="/images/commissioner2.jpg" 
-                altText="Dr. (Rt. Hon.) C.C. Osuala" 
-                commissionerName="Dr. (Rt. Hon.) C.C. Osuala" 
-                commissionerDescription="As Commissioner for Budget, Economic Planning & Statistics, Dr. (Rt. Hon.) C.C. Osuala is a seasoned leader and policy advocate dedicated to fostering sustainable economic growth and development in Imo State."
-            />     
+            <MVSSection />
             <ObjectivesSection />
             <StructuresSection 
                 imgSrc="/images/building.png"
             />
+            <section className="w-full py-10 md:py-16 px-2 md:px-4 bg-white mx-auto flex flex-col items-center">
+                <TeamGridSection members={teamMembers} />
+                <AppLink href="/about-us" label="Learn More" variant="primary" className="hover:bg-primary-green/80 transition-all duration-300"/>
+            </section>
             <CTASection 
                 heading="Be part of Imo’s transformation with MBEPS"
                 buttonLabel="See Our Projects"

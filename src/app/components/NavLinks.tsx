@@ -7,11 +7,11 @@ import React from "react";
 const navLinks = [
     { label: "Home", href: "/" },
     { label: "About Us", href: "/about-us" },
-    { label: "Projects", href: "/projects" },
-    { label: "News", href: "/news" },
     { label: "Departments", href: "/departments" },
-    { label: "Events", href: "/events" },
+    { label: "Projects", href: "/projects" },
     { label: "Media", href: "/media" },
+    { label: "Events", href: "/events" },
+    { label: "News", href: "/news" },
     { label: "Contact Us", href: "/contact-us" }
 ];
 

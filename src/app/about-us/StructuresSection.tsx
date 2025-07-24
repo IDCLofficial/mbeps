@@ -1,36 +1,12 @@
 import Image from "next/image";
+import { departments } from "../departments/departments";
 
 interface StructuresSectionProps {
     imgSrc: string;
 }
 
 export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
-    const departments = {
-        row1: [
-            {
-                title: "Budget Department",
-                description: "Prepares and manages the state’s budget."
-            },
-            {
-                title: "Planning Department",
-                description: "Develops medium to long-term development plans."
-            },
-            {
-                title: "Monitoring & Evaluation (M&E)",
-                description: "Tracks implementation and evaluates performance."
-            },
-        ],
-        row2: [
-            {
-                title: "International Cooperation",
-                description: "Liaises with donor agencies and international development partners."
-            },
-            {
-                title: "Statistics Department",
-                description: "Collects, analyzes, and disseminates statistical data to inform policy and planning."
-            },
-        ]
-    }
+    
 
     return (
         <section className="w-full bg-[#1D1D1D] py-10 md:py-20">
@@ -54,11 +30,12 @@ export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
                 </div>
                 {/* Department Cards Grid */}
                 <div className="flex flex-col gap-2 w-full">
-                    <div className="flex flex-col md:flex-row gap-2 w-full justify-between">
-                        {departments.row1.map((department, index) => (
-                            <div key={index} className="flex-1 bg-white p-4 md:p-8 shadow-md border border-gray-200 mb-2 md:mb-0">
+                    {/* Top row: 3 departments */}
+                    <div className="flex flex-col md:flex-row gap-2 w-full justify-between mb-2">
+                        {departments.slice(0, 3).map((department, index) => (
+                            <div key={index} className="flex-1 bg-white p-4 md:p-8 shadow-md border border-gray-200">
                                 <h3 className="font-bold text-base md:text-[22px] text-dark-primary mb-2 md:mb-3">
-                                    {department?.title}
+                                    {department?.name}
                                 </h3>
                                 <p className="text-dark-secondary-body text-sm md:text-[16px]">
                                     {department?.description}
@@ -66,11 +43,12 @@ export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
                             </div>
                         ))}
                     </div>
-                    <div className="flex flex-col md:flex-row w-full gap-2">
-                        {departments.row2.map((department, index) => (
-                            <div key={index} className="flex-1 bg-white p-4 md:p-8 shadow-md border border-gray-200 mb-2 md:mb-0">
+                    {/* Bottom row: 2 departments */}
+                    <div className="flex flex-col md:flex-row gap-2 w-full justify-center">
+                        {departments.slice(3, 5).map((department, index) => (
+                            <div key={index} className="flex-1 bg-white p-4 md:p-8 shadow-md border border-gray-200">
                                 <h3 className="font-bold text-base md:text-[22px] text-dark-primary mb-2 md:mb-3">
-                                    {department?.title}
+                                    {department?.name}
                                 </h3>
                                 <p className="text-dark-secondary-body text-sm md:text-[16px]">
                                     {department?.description}
@@ -78,6 +56,7 @@ export const StructuresSection = ({imgSrc}: StructuresSectionProps) => {
                             </div>
                         ))}
                     </div>
+                    
                 </div>
             </div>
         </section>
