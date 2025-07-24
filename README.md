@@ -147,3 +147,4 @@ For more details, see the [Next.js deployment documentation](https://nextjs.org/
 ---
 
 _This project was bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app) and customized for [INSERT ORGANIZATION/PROJECT NAME], focusing on [INSERT FOCUS/GOAL]._
+
