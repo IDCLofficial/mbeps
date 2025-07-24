@@ -31,7 +31,7 @@ export default function AboutUs() {
             />
             <section className="w-full py-10 md:py-16 px-2 md:px-4 bg-white mx-auto flex flex-col items-center">
                 <TeamGridSection members={teamMembers} />
-                <AppLink href="/about-us" label="Learn More" variant="primary" className="hover:bg-primary-green/80 transition-all duration-300"/>
+                <AppLink href="/about-us/team" label="Learn More" variant="primary" className="hover:bg-primary-green/80 transition-all duration-300"/>
             </section>
             <CTASection 
                 heading="Be part of Imo’s transformation with MBEPS"

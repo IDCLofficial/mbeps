@@ -9,9 +9,9 @@ export default function UnitsTabsSection() {
   const active = departments[activeIdx];
 
   return (
-    <section className="w-full max-w-6xl mx-auto flex flex-col md:flex-row gap-8 py-16 px-4">
+    <section className="w-full mx-auto flex flex-col md:flex-row gap-8 py-16 px-4 md:px-8">
       {/* Tabs */}
-      <div className="w-full md:w-1/4 border-r pr-4">
+      <div className="w-full md:w-2/6 border-r pr-4">
         <ul className="space-y-2">
           {departments.map((dept, idx) => (
             <li key={dept.name}>
@@ -26,10 +26,10 @@ export default function UnitsTabsSection() {
         </ul>
       </div>
       {/* Content */}
-      <div className="flex-1">
+      <div className="flex-1 px-10">
         <h2 className="text-2xl md:text-4xl font-medium mb-4">{active.name}</h2>
         <div className="w-full max-w-xl mb-4">
-          <Image src={active.image} alt={active.name} width={600} height={300} className="rounded-xl object-cover" />
+          <Image src={active.image} alt={active.name} width={600} height={300} className="rounded-xl object-cover h-[300px]" />
         </div>
         <p className="text-gray-700 text-sm md:text-[1rem] text-dark-primary-body">{active.description}</p>
       </div>
