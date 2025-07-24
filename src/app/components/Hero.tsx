@@ -71,13 +71,14 @@ export const Hero = () => {
 import { ReactNode } from "react";
 
 interface SubsequentHeroProps {
-    children: ReactNode;
+    children: ReactNode,
+    className?: string;
 }
 
-export const SubsequentHero = ({ children }: SubsequentHeroProps) => {
+export const SubsequentHero = ({ children, className }: SubsequentHeroProps) => {
     return (
         <div className="relative h-[350px] md:min-h-[80vh] px-4 md:px-[3rem] py-8 md:py-10 flex flex-col justify-center bg-gradient-to-r from-green-900/20 via-black to-black">
-            <div className="absolute inset-0 bg-[url('/images/gradient.png')] bg-cover bg-center z-0"></div>
+            <div className={`absolute inset-0 bg-cover bg-center z-0 ${className}`}></div>
             {children}
         </div>
     );

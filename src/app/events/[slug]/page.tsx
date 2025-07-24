@@ -100,12 +100,12 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
         </h1>
       </section>
       {/* Event Image & Countdown */}
-      <section className="relative w-full flex flex-col items-center pt-6 md:pt-12 pb-4 md:pb-6 px-4 md:px-20">
+      <section className="relative w-[80%] mx-auto flex flex-col items-center pt-6 md:pt-12 pb-4 md:pb-6 px-4 md:px-20">
         <div className="w-full relative">
           <Image
             src={event.img}
             alt={event.title}
-            width={1920}
+            width={1024}
             height={600}
             className="object-cover w-full h-[180px] md:h-[480px] rounded-none"
             priority
@@ -119,7 +119,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
         </p>
       </section>
       {/* Event Details */}
-      <section className="w-full max-w-6xl mx-auto px-4 mb-8 md:mb-12">
+      <section className="w-[80%] mx-auto px-4 mb-8 md:mb-12">
         <h2 className="text-lg md:text-2xl font-bold mb-2 md:mb-4">Event details</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 text-sm md:text-base">
           <div className="flex-row justify-between w-full items-center"><span className="font-semibold">DATE:</span> <span className="ml-2">{event.date}</span></div>
@@ -130,7 +130,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
         </div>
       </section>
       {/* Speakers */}
-      <section className="w-full max-w-6xl mx-auto px-4 mb-12 md:mb-16">
+      <section className="w-[80%] mx-auto px-4 mb-12 md:mb-16">
         <h2 className="text-lg md:text-2xl font-bold mb-4 md:mb-6">Speakers</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {(event.speakers && event.speakers.length > 0) ? event.speakers.map((sp, idx) => (

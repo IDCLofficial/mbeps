@@ -13,12 +13,12 @@ const MediaGalleryCard: React.FC<MediaGalleryCardProps> = ({ image, title, isVid
       <div className="relative w-full h-48">
         <Image src={image} alt={title} fill className="object-cover" />
         {isVideo && (
-          <span className="absolute inset-0 flex items-center justify-center">
+          <a href="#" className="absolute inset-0 flex items-center justify-center">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="24" cy="24" r="24" fill="red" />
               <polygon points="20,16 34,24 20,32" fill="#fff" />
             </svg>
-          </span>
+          </a>
         )}
       </div>
       <div className="p-4 flex-1 flex flex-col">

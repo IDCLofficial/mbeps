@@ -46,6 +46,11 @@ const mediaItems = [
     isVideo: false,
   },
   {
+    image: "/images/homeImage1.png",
+    title: "SKILLUP IMO COHORT 5 GRADUATION CEREMONY.",
+    isVideo: false,
+  },
+  {
     image: "/images/homeImage2.png",
     title: "SKILLUP IMO COHORT 5 GRADUATION CEREMONY.",
     isVideo: false,

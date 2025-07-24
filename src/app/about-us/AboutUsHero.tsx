@@ -7,7 +7,7 @@ interface AboutUsHeroProps {
 
 export const AboutUsHero = ({ ministryName}: AboutUsHeroProps) => {
     return (
-    <SubsequentHero>
+        <SubsequentHero className="bg-[url('/images/gradient.png')]">
             {/* Navigation Highlight */}
             <div className="relative z-10 flex justify-center">
                 <Title label="About Us" />

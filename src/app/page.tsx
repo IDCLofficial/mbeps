@@ -42,7 +42,7 @@ export default function Home() {
       <Stats />
       {/* <FeaturedPartners /> */}
       <CTASection 
-        heading="Partnering for a Prosperous Imo"
+        heading="Partner with us for a Prosperous Imo"
         subtext="Join us in shaping a transparent, data-driven, and sustainable future for all through effective budgeting and strategic economic planning."
         buttonLabel="Contact Us"
         buttonHref="/contact-us"

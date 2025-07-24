@@ -4,7 +4,7 @@ import events from "./eventsList";
 
 export default function EventsListSection() {
   return (
-    <section className="w-full max-w-6xl mx-auto py-16 px-4">
+    <section className="w-full mx-auto py-16 px-4 md:px-8">
       <h2 className="text-2xl md:text-2xl font-medium mb-8">Upcoming Events</h2>
       {events.length === 0 ? (
         <div className="text-center text-gray-500 py-12 text-lg">No upcoming events at this time. Please check back later.</div>
