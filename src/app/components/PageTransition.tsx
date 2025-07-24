@@ -5,7 +5,7 @@ import React from "react";
 interface PageTransitionProps extends MotionProps {
   children: React.ReactNode;
   type?: "fade" | "fadeUp";
-  transition?: Transition<any>;
+  transition?: Transition;
 }
 
 export default function PageTransition({ children, type = "fade", ...rest }: PageTransitionProps) {
