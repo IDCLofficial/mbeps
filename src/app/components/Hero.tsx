@@ -57,7 +57,7 @@ export const Hero = () => {
                 <div className="w-full md:w-[60%] flex flex-col gap-2">
                     <PageTransition type="fadeUp">
                         <Title label='Imo State Ministry of Budget, Economic Planning & Statistics'/>
-                        <h1 className="text-2xl md:text-[3rem] font-bold text-white leading-tight">{caption}</h1>
+                        <h1 className="text-2xl md:text-[3rem] font-bold text-white leading-tight py-2">{caption}</h1>
                         <p className="text-[1rem] md:text-[1.125rem] font-light leading-[1.5] text-white">
                             {subtitle}
                         </p>
