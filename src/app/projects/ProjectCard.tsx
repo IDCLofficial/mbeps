@@ -13,7 +13,7 @@ export default function ProjectCard({ title, description, image }: ProjectCardPr
       <div className="w-full relative rounded-lg overflow-hidden md:hidden"> 
         <Image src={image} alt={title} width={500} height={500} className="object-cover w-full h-[180px] md:h-[400px]" />
       </div>
-      <div className="w-[60%] md:flex-1 flex flex-col gap-4 md:gap-6">
+      <div className="md:w-[60%] md:flex-1 flex flex-col gap-4 md:gap-6">
         <h2 className="text-xl md:text-3xl lg:text-[43px] font-medium">{title}</h2>
         <p className="text-dark-primary-body text-sm md:text-[1rem] leading-relaxed">
           {description}

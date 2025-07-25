@@ -47,7 +47,7 @@ export const Hero = () => {
                 key={bgImage}
                 src={bgImage}
                 alt="hero"
-                className="absolute inset-0 w-full h-full object-fit z-0"
+                className="absolute inset-0 w-full h-full object-cover z-0"
                 initial={{ scale: .90}}
                 animate={{ scale: 1}}
                 transition={{ duration: 2, ease: "easeOut" }}
