@@ -25,11 +25,11 @@ export default function AboutCommisioner({imgSrc, title}: AboutCommisionerProps)
             {/* Right: Text Content */}
             <div className="flex-1 w-full md:w-auto mt-6 md:mt-0">
                 <h2 className="text-xl md:text-2xl lg:text-[43px] font-bold text-dark-primary mb-4">{title}</h2>
-                <p className="text-dark-primary-body text-sm md:text-base mb-4">
+                <p className="text-dark-primary-body text-base mb-4">
                     Dr. (Rt. Hon.) C.C. Osuala is a distinguished technocrat and scholar with a remarkable blend of academic excellence, international experience, and public service. With three doctorate degrees in General Engineering, 
                     Engineering Sciences, and Management from top U.S. universities, as well as a Bachelor’s degree in Law, Dr. Osuala brings a unique perspective to governance and economic planning.
                 </p>
-                <p className="text-dark-primary-body text-sm md:text-base mb-6 text-justify">
+                <p className="text-dark-primary-body text-base mb-6 text-justify">
                     His vision for the Ministry of Budget, Economic Planning & Statistics is rooted in transparency, inclusivity, and innovation. Dr. Osuala is committed to making Imo State’s budgeting process open and accessible, exemplified by his introduction 
                     of the state’s first Citizens’ Budget—also translated into Igbo to ensure no one is left behind. He believes in participatory governance, regularly engaging all 655 autonomous communities, civil society, and youth groups to shape budget priorities that reflect the true needs of Imo people.
                     Under his leadership, the ministry has achieved unprecedented budget transparency, earning international recognition and securing significant World Bank grants that have fueled capital projects and improved revenue generation.

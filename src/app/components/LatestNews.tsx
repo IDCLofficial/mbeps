@@ -17,9 +17,9 @@ export default function LatestNews() {
             <div className="relative w-full h-[140px] md:h-[180px]">
               <Image src={item.img} alt={item.title} fill className="object-cover" />
             </div>
-            <div className="p-4 md:p-5 flex-1 flex flex-col">
+            <div className="w-full p-4 md:p-5 flex-1 flex flex-col">
               <h3 className="text-dark-secondary text-xs md:text-[15px] font-bold text-gray-900 mb-2 uppercase leading-snug">{item.title}</h3>
-              <p className="text-dark-primary-body text-gray-700 text-xs md:text-sm mb-2 md:mb-4">{item.desc}</p>
+              <p className="text-dark-primary-body text-gray-700 text-base mb-2 md:mb-4">{item.desc}</p>
               <span className="text-dark-tertiary text-xs md:text-[15px] font-bold text-gray-900 mt-auto">{item.date}</span>
             </div>
           </Link>

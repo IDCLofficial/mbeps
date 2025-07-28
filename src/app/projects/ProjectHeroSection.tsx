@@ -5,7 +5,7 @@ export default function ProjectHeroSection() {
   return (
     <SubsequentHero className="bg-[url('/images/projectsHero.png')]"> 
       <div className="relative z-10 flex items-center justify-center w-full h-full">
-        <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold text-center px-4">Empowering Imo’s Digital Future</h1>
+        <h1 className="text-white text-2xl md:text-4xl lg:text-5xl font-bold text-center px-4">See What We Have Done</h1>
       </div>
     </SubsequentHero>
   );

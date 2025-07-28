@@ -104,7 +104,7 @@ export default function Stats() {
           return (
             <div key={idx} className="flex-1 flex flex-col items-center justify-center py-6 md:py-0">
               <span className="text-white text-2xl md:text-3xl lg:text-4xl font-bold mb-2">{display}</span>
-              <span className="text-gray-200 text-xs md:text-base text-center leading-tight">{stat.desc}</span>
+              <span className="text-gray-200 text-base md:text-base text-center leading-tight">{stat.desc}</span>
             </div>
           );
         })}

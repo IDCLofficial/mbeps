@@ -3,8 +3,8 @@ import ContactHeroSection from "./ContactHeroSection";
 import ContactInfoSection from "./ContactInfoSection";
 import ContactFormSection from "./ContactFormSection";
 import ContactImageSection from "./ContactImageSection";
-import ContactCTASection from "./ContactCTASection";
 import Footer from "../components/Footer";
+import CTASection from "../components/CTASection";
 
 export default function ContactUsPage() {
   return (
@@ -21,7 +21,12 @@ export default function ContactUsPage() {
         </div>
         <ContactImageSection />
       </section>
-      <ContactCTASection />
+      <CTASection
+        heading="Partner with us for a Prosperous Imo"
+        subtext="Join us in shaping a transparent, data-driven, and sustainable future for all through effective budgeting and strategic economic planning."
+        buttonLabel="Contact Us"
+        buttonHref="/contact-us" 
+      />
       <Footer />
     </main>
   );

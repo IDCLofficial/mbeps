@@ -5,8 +5,8 @@ import TeamGridSection from "./TeamGridSection";
 import Footer from "../../components/Footer";
 import CTASection from "../../components/CTASection";
 
-const commissionerDescription = `Before his appointment, Dr. Amadi served at the Nigerian Communications Commission (NCC), where he held key roles in departments such as Procurement, Projects, Compliance, Monitoring and Enforcement, and Research and Development. He notably headed the Emerging Technology Unit, focusing on cutting-edge ICT initiatives and fostering collaboration between academia and industry through programs like ACADOPRENEUR.
-\nAs Commissioner, Dr. Amadi introduced the Digital Imo Agenda, aiming to train 100,000 youths, women, and individuals with disabilities in essential 21st-century digital skills, including software development, blockchain, and game development. This initiative is part of a broader mission to build smart cities that leverage digital technology to drive governance, innovation, and entrepreneurship, promoting transformative value creation and prosperity for all.`;
+const commissionerDescription = `Dr. (Rt. Hon.) C.C. Osuala is a distinguished technocrat and scholar with a remarkable blend of academic excellence, international experience, and public service. With three doctorate degrees in General Engineering, Engineering Sciences, and Management from top U.S. universities, as well as a Bachelor’s degree in Law, Dr. Osuala brings a unique perspective to governance and economic planning.
+His vision for the Ministry of Budget, Economic Planning & Statistics is rooted in transparency, inclusivity, and innovation. Dr. Osuala is committed to making Imo State’s budgeting process open and accessible, exemplified by his introduction of the state’s first Citizens’ Budget—also translated into Igbo to ensure no one is left behind. He believes in participatory governance, regularly engaging all 655 autonomous communities, civil society, and youth groups to shape budget priorities that reflect the true needs of Imo people. Under his leadership, the ministry has achieved unprecedented budget transparency, earning international recognition and securing significant World Bank grants that have fueled capital projects and improved revenue generation. Dr. Osuala’s goal is to institutionalize citizen-driven budgeting, foster sustainable economic growth, and ensure that Imo State’s development is both inclusive and measurable. His unwavering dedication continues to position the ministry as a model for fiscal responsibility and community empowerment in Nigeria.`;
 
 const initiatives = [
   "SkillUpImo Project: This flagship program has trained thousands of young people in digital skills, providing them with tools like laptops and smartphones to kickstart their tech careers. The initiative has positioned Imo State as a leading digital skills hub in Nigeria.",
@@ -42,7 +42,7 @@ export default function TeamPage() {
         </p>
       </div>
       <CTASection
-        heading="Join our mission to make Imo the digital heart of Nigeria"
+        heading="Be part of Imo’s transformation with MBEPS"
         buttonLabel="Contact Us"
         buttonHref="/contact-us"
       />    
