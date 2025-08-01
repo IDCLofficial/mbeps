@@ -2,13 +2,15 @@
 import React, { useEffect, useState } from "react";
 import PageTransition from "./PageTransition";
 import { Title } from "./Title";
-import { motion } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 
 interface HeroSlide {
     caption: string;
     subtitle?: string;
     bgImage: string;
 }
+
+
 
 const heroData: HeroSlide[] = [
     {
@@ -28,29 +30,33 @@ const heroData: HeroSlide[] = [
 ];
 
 export const Hero = () => {
-    const [current, setCurrent] = useState(0);
-
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const controls = useAnimation();
+  
     useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrent((prev) => (prev + 1) % heroData.length);
-        }, 5000); // 5 seconds per slide
-        return () => clearInterval(interval);
+      const interval = setInterval(() => {
+        setCurrentIndex(prev => (prev + 1) % heroData.length);
+      }, 5000); // Change every 5 seconds
+  
+      return () => clearInterval(interval);
     }, []);
+  
+    useEffect(() => {
+      controls.start({ x: 0, opacity: 1 });
+    }, [currentIndex, controls]);
 
-    const { caption, subtitle, bgImage } = heroData[current];
+    const { caption, subtitle, bgImage } = heroData[currentIndex];
 
     return(
-        <div
-            className={`min-h-screen px-4 md:px-[3rem] flex flex-col justify-center bg-cover bg-center`}
-        >
-            <motion.img
+        <div className={`min-h-screen px-4 md:px-[3rem] flex flex-col justify-center bg-cover bg-center`}>
+            <motion.div
                 key={bgImage}
-                src={bgImage}
-                alt="hero"
-                className="absolute inset-0 w-full h-full object-cover z-0"
-                initial={{ scale: .90}}
-                animate={{ scale: 1}}
-                transition={{ duration: 2, ease: "easeOut" }}
+                initial={{ x: 0, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: '-100%', opacity: 0 }}
+                transition={{ duration: 3 }}
+                className={`absolute inset-0 w-full h-full object-cover z-0 bg-${bgImage} bg-no-repeat bg-cover`}
+                style={{ backgroundImage: `url(${bgImage})` }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/10 z-0"></div>
             <div className="relative z-10 py-10">
