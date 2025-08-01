@@ -3,28 +3,28 @@ import { AppLink } from "./AppLink";
 
 const links = [
   {
-    title: "2024/2025 Budget",
+    title: "2025 Budget - Approved",
     desc: "Click the button below to download the 2024/2025 Budget.",
     img: "/images/documents/bill.jpg",
-    href: "/initiatives/youth-empowerment"
+    href: "/docs/IMSG_2025_Budget_ver-Approved (1).pdf"
   },
   {
-    title: "2025 Citizens’ Budget (English)",
-    desc: "Download the 2025 Citizens’ Budget in English for a detailed overview of state allocations and priorities.",
+    title: "2025 Citizens’ Budget",
+    desc: "Download the 2025 Citizens’ Budget for a detailed overview of state allocations and priorities.",
     img: "/images/documents/bill.jpg",
-    href: "/documents/2025-citizens-budget-en.pdf"
+    href: "/documents/IMSG_2025_Citizens_Budget.pdf"
   },
   {
-    title: "2025 Citizens’ Budget (Igbo)",
+    title: "2025 Q1 Budget Report",
     desc: "Access the 2025 Citizens’ Budget translated into Igbo for inclusive and transparent governance.",
     img: "/images/documents/bill.jpg",
-    href: "/documents/2025-citizens-budget-igbo.pdf"
+    href: "/documents/IMSG_2025_Q1_Budget_Report.pdf"
   },
   {
-    title: "2024 Budget Performance Report",
+    title: "2025 Q2 Budget Report",
     desc: "Review the 2024 Budget Performance Report to see how funds were allocated and utilized.",
     img: "/images/documents/bill.jpg",
-    href: "/documents/2024-budget-performance-report.pdf"
+    href: "/documents/IMSG_2025_Q2_Budget_Report.pdf"
   },
 ];
 
@@ -45,6 +45,7 @@ export default function Publications() {
                 </div>
                 <AppLink href={link.href} label="Download" variant="secondary" className="border border-1 border-primary-green text-[14px] px-[10px] py-[6px] rounded-[3.4px] 
                 font-medium hover:bg-primary-green hover:text-white transition-all duration-300 w-max" download />
+                
             </div>
           </div>
         ))}
