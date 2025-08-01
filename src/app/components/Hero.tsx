@@ -52,7 +52,7 @@ export const Hero = () => {
                 animate={{ scale: 1}}
                 transition={{ duration: 2, ease: "easeOut" }}
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/40 z-0"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/10 z-0"></div>
             <div className="relative z-10 py-10">
                 <div className="w-full md:w-[60%] flex flex-col gap-2">
                     <PageTransition type="fadeUp">

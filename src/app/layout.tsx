@@ -45,9 +45,9 @@ export default function RootLayout({
       >
         <Navbar onOpenSidebar={() => setSidebarOpen(true)} />
         <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-        <PageTransitionWrapper>
+        {/* <PageTransitionWrapper> */}
           {children}
-        </PageTransitionWrapper>
+        {/* </PageTransitionWrapper> */}
       </body>
     </html>
   );

@@ -29,7 +29,6 @@ export const ObjectivesSection = () => {
     const coreValues = [
         "Integrity",
         "Efficiency",
-        "Collaboration",
         "Innovation",
         "Inclusiveness"
     ];
