@@ -1,30 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BiChevronDown } from "react-icons/bi";
+import {newsList} from "./newsList"
 
 const categories = [
   { name: "Latest Updates", count: 12 },
   { name: "Policies", count: 12 },
   { name: "Latest Updates", count: 12 },
   { name: "Latest Updates", count: 12 },
-];
-
-const popularNews = [
-  {
-    title: "IMO STATE LAUNCHES MAJOR BROADBAND...",
-    date: "MAY 30, 2025",
-    img: "/images/homeImage1.jpg",
-  },
-  {
-    title: "IMO STATE LAUNCHES MAJOR BROADBAND...",
-    date: "MAY 30, 2025",
-    img: "/images/homeImage1.jpg",
-  },
-  {
-    title: "IMO STATE LAUNCHES MAJOR BROADBAND...",
-    date: "MAY 30, 2025",
-    img: "/images/homeImage1.jpg",
-  },
 ];
 
 export default function NewsSidebar() {
@@ -58,7 +41,7 @@ export default function NewsSidebar() {
       <div className="max-md:hidden">
         <h3 className="font-medium text-base md:text-[18px] mb-2 md:mb-4">POPULAR NEWS</h3>
         <ul className="space-y-2 md:space-y-4">
-          {popularNews.map((news, idx) => (
+          {newsList.map((news, idx) => (
             <li key={idx} className="flex gap-2 md:gap-3 items-center">
               <Link href={`/news/${news.title}`} className="flex gap-2 md:gap-3 items-center">
                 <div className="w-[50px] h-[50px] relative rounded overflow-hidden flex-shrink-0">

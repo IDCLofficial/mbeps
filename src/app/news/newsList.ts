@@ -1,4 +1,4 @@
-const newsList = [
+export const newsList = [
   {
     title: "Imo State Holds Economic Planning Summit",
     date: "May 28, 2025",
