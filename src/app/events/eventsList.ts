@@ -1,62 +1,18 @@
-const events = [
-  {
-    slug: "2025-budget-stakeholders-forum",
-    date: "JULY 25, 2025",
-    location: "Imo State Government House",
-    title: "2025 Budget Stakeholders Forum",
-    description: "A forum for stakeholders to discuss the 2025 budget, transparency, and citizen engagement.",
-    img: "/images/homeImage2.jpg",
-    time: "10:00 am",
-    organizer: "Imo State Ministry of Budget, Economic Planning & Statistics",
-    phone: "0809 8892 901",
-    address: "Imo State Government House",
-    speakers: [
-        {
-            name: "JAPHET GILBERT",
-            role: "Lead Speaker",
-            img: "/images/commissioner2.png",
-          },
-    ],
-  },
-  {
-    slug: "economic-planning-data-conference",
-    date: "AUGUST 5, 2025",
-    location: "Imo State University Auditorium",
-    title: "Economic Planning & Data Conference",
-    description: "Conference on the role of data in economic planning and sustainable development in Imo State.",
-    img: "/images/commissioner.png",
-    time: "9:00 am",
-    organizer: "Imo State University",
-    phone: "0809 8892 902",
-    address: "Imo State University Auditorium",
-    speakers: [],
-  },
-  {
-    slug: "public-investment-management-workshop",
-    date: "SEPTEMBER 12, 2025",
-    location: "Owerri City Hall",
-    title: "Public Investment Management Workshop",
-    description: "Workshop for public sector professionals on best practices in investment management.",
-    img: "/images/commissioner2.jpg",
-    time: "11:00 am",
-    organizer: "Imo State Ministry of Budget, Economic Planning & Statistics",
-    phone: "0809 8892 903",
-    address: "Owerri City Hall",
-    speakers: [],
-  },
-  {
-    slug: "state-data-coordination-day",
-    date: "OCTOBER 20, 2025",
-    location: "Imo State Bureau of Statistics",
-    title: "State Data Coordination Day",
-    description: "A day dedicated to promoting data-driven governance and inter-agency collaboration.",
-    img: "/images/building.png",
-    time: "10:00 am",
-    organizer: "Imo State Bureau of Statistics",
-    phone: "0809 8892 904",
-    address: "Imo State Bureau of Statistics",
-    speakers: [],
-  },
-];
+type event = {
+  slug: string,
+  date: string,
+  location: string,
+  title: string,
+  description: string,
+  img: string,
+  time: string,
+  organizer: string,
+  phone: string,
+  address: string,
+  speakers: [],
+}
+
+
+const events:event[] = [];
 
 export default events; 
