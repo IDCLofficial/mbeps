@@ -32,7 +32,7 @@ export default function ProjectsSection() {
     const currentProjects = projects.slice(start, end);
 
     return (
-        <section className="w-full py-10 md:py-16 bg-white flex flex-col items-center gap-8 md:gap-22 px-4 md:px-8">
+        <section className="w-full py-10 md:py-16 bg-white flex flex-col items-center gap-8 md:gap-22 divide-y-2 divide-gray-200 px-4 md:px-8">
             {currentProjects.map((project) => (
                 <ProjectCard key={project.title} {...project} />
             ))}

@@ -4,26 +4,26 @@ import { useEffect, useState, useRef } from "react";
 
 const stats = [
   {
-    value: "₦474B+",
-    desc: "2025 State Budget Size",
+    value: "₦592.2B",
+    desc: "2024 State Budget Size",
   },
   {
-    value: "655",
+    value: "500+",
     desc: "Autonomous Communities Engaged",
   },
   {
-    value: "5",
+    value: "3+",
     desc: "World Bank Grants Secured",
   },
   {
-    value: "100+",
+    value: "80+",
     desc: "Public Projects Monitored Annually",
   },
   {
-    value: "20+",
+    value: "10+",
     desc: "Data-Driven Policies Implemented",
   },
-];
+]
 
 function parseStatValue(val: string) {
   // Remove non-numeric except +, %

@@ -15,16 +15,20 @@ interface MediaGalleryGridProps {
 
 const MEDIA_PER_PAGE = 9;
 
-const MediaGalleryGrid: React.FC<MediaGalleryGridProps> = ({ items }) => {
+const MediaGalleryGrid: React.FC<MediaGalleryGridProps> = ({ items }:MediaGalleryGridProps) => {
   const [page, setPage] = useState(0);
   const totalPages = Math.ceil(items.length / MEDIA_PER_PAGE);
   const start = page * MEDIA_PER_PAGE;
   const end = start + MEDIA_PER_PAGE;
   const currentItems = items.slice(start, end);
 
+  if(items.length === 0) return(
+    <p className="text-2xl">No media Items found</p>
+  )
+
   return (
     <div className="w-full flex flex-col items-center">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full py-12 px-8">
         {currentItems.map((item, idx) => (
           <MediaGalleryCard key={idx} image={item.image} title={item.title} isVideo={item.isVideo} />
         ))}

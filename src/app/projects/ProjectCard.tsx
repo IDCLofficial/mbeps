@@ -33,11 +33,6 @@ export default function ProjectCard({ title, description, image }: ProjectCardPr
             <span className="text-gray-500 text-xs md:text-sm">certified instructors</span>
           </div>
         </div> */}
-        <div className="flex flex-wrap gap-4 md:gap-6 mt-6 items-center justify-start">
-          <Image src="/images/cisco.png" alt="Cisco" width={70} height={30} />
-          <Image src="/images/huawei.png" alt="Huawei" width={70} height={30} />
-          <Image src="/images/microsoft.png" alt="Microsoft" width={70} height={30} />
-        </div>
       </div>
       <div className="w-full md:w-[40%] flex justify-center mt-6 md:mt-0">
         <div className="w-full relative rounded-lg overflow-hidden max-md:hidden">

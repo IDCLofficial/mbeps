@@ -6,6 +6,7 @@ import { FadeUpTransition } from "../components/PageTransition";
 import { SubsequentHero } from "../components/Hero";
 import MediaSearchBar from "./MediaSearchBar";
 import SearchBar from "../components/SearchBar";
+import { Title } from "../components/Title";
 
 interface MediaHeroSectionProps {
   title: string;
@@ -25,6 +26,7 @@ const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle, ba
   return (
     <SubsequentHero className="bg-[url('/images/gradient.png')]">
       <div className="relative z-10 w-[80%] mx-auto flex flex-col items-center justify-end gap-0 h-full px-4 text-center">
+        <Title label="Media" />
         <FadeUpTransition>
           <h1 className="text-white text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">{title}</h1>
         </FadeUpTransition>

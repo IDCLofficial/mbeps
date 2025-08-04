@@ -34,8 +34,8 @@ export default function Home() {
       />
       <Departments />
       <section className="w-full flex flex-col gap-2">
-        <QuickLinks />
         <Publications />
+        <QuickLinks />
         {/* <Advertisement /> */}
         <LatestNews />
       </section>

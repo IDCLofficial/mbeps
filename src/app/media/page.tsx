@@ -3,6 +3,7 @@ import MediaHeroSection from "./MediaHeroSection";
 import MediaGalleryGrid from "./MediaGalleryGrid";
 import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
+import { Media } from "./media";
 
 interface MediaItem {
   image: string;
@@ -21,9 +22,7 @@ export default function MediaPage() {
         subtitle="Explore our gallery of photos, videos, and press releases capturing our journey toward a digitally empowered Imo State."
         backgroundImage="/images/heroImage.png"
       />
-      <section className="w-full max-w-7xl mx-auto py-12 px-4 text-center">
-        No Media Items Found
-      </section>
+      <MediaGalleryGrid items={Media} />
       <CTASection 
         heading="Ready to Experience the New Imo?" 
         subtext="Discover our vision for an inclusive, empowered, and connected state." 

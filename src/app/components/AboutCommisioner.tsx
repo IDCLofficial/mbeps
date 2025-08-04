@@ -1,5 +1,7 @@
+"use client"
 import Image from "next/image";
 import { AppLink } from "./AppLink";
+import {motion} from "framer-motion"
 
 interface AboutCommisionerProps {
     imgSrc: string;
@@ -9,15 +11,19 @@ interface AboutCommisionerProps {
 export default function AboutCommisioner({imgSrc, title}: AboutCommisionerProps) {
   return (
     <section className="w-full bg-[#f3f8fa] py-12 md:py-20 flex justify-center">
-        <div className="flex flex-col md:flex-row items-center gap-8 md:gap-18 w-full px-4 md:px-[3rem]">
+        <motion.div 
+            initial={{opacity: 0, y:80}}
+            whileInView={{opacity:1, y:0}}
+            transition={{duration: 1, ease:"linear"}}
+            className="flex flex-col lg:flex-row items-center gap-8 md:gap-18 w-full px-4 md:px-[3rem]">
             {/* Left: Commissioner Image */}
-            <div className="bg-white rounded-xl shadow-lg flex-shrink-0 w-full md:w-auto flex justify-center">
-                <div className="relative w-full h-[240px] md:w-[300px] md:h-[340px] lg:w-[500px] lg:h-[360px]">
+            <div className="bg-white rounded-xl shadow-lg flex-shrink-0 w-full lg:w-auto flex justify-center">
+                <div className="relative w-full h-[350px] lg:w-[500px] lg:h-[360px]">
                     <Image
                     src={imgSrc}
                     alt="Commissioner"
                     fill
-                    className="object-cover object-center rounded-xl"
+                    className="object-fit object-center rounded-xl w-full"
                     sizes="(max-width: 768px) 220px, 320px"
                     />
                 </div>
@@ -36,7 +42,7 @@ export default function AboutCommisioner({imgSrc, title}: AboutCommisionerProps)
                     Dr. Osuala’s goal is to institutionalize citizen-driven budgeting, foster sustainable economic growth, and ensure that Imo State’s development is both inclusive and measurable. His unwavering dedication continues to position the ministry as a model for fiscal responsibility and community empowerment in Nigeria.
                 </p>
             </div>
-        </div>
+        </motion.div>
     </section>
   );
 } 

@@ -55,7 +55,7 @@ export const Hero = () => {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: '-100%', opacity: 0 }}
                 transition={{ duration: 3 }}
-                className={`absolute inset-0 w-full h-full object-cover z-0 bg-${bgImage} bg-no-repeat bg-cover`}
+                className={`absolute inset-0 w-full h-full object-cover z-0 bg-${bgImage} bg-no-repeat bg-cover bg-center bg-origin-border`}
                 style={{ backgroundImage: `url(${bgImage})` }}
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/10 z-0"></div>
@@ -63,8 +63,8 @@ export const Hero = () => {
                 <div className="w-full md:w-[60%] flex flex-col gap-2">
                     <PageTransition type="fadeUp">
                         <Title label='Imo State Ministry of Budget, Economic Planning & Statistics'/>
-                        <h1 className="text-2xl md:text-[3rem] font-bold text-white leading-tight py-2">{caption}</h1>
-                        <p className="text-[1rem] md:text-[1.125rem] font-light leading-[1.5] text-white">
+                        <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight py-2">{caption}</h1>
+                        <p className="text-[1.125rem] font-normal leading-[1.5] text-white">
                             {subtitle}
                         </p>
                     </PageTransition>
@@ -83,7 +83,7 @@ interface SubsequentHeroProps {
 
 export const SubsequentHero = ({ children, className }: SubsequentHeroProps) => {
     return (
-        <div className="relative h-[350px] md:min-h-[80vh] px-4 md:px-[3rem] py-8 md:py-10 flex flex-col justify-center bg-gradient-to-r from-green-900/20 via-black to-black">
+        <div className="relative h-[350px] md:min-h-[85vh] px-4 lg:px-[3rem] py-8 lg:py-10 flex flex-col gap-2 justify-center bg-gradient-to-r from-green-900/20 via-black to-black">
             <div className={`absolute inset-0 bg-cover bg-center z-0 ${className}`}></div>
             {children}
         </div>

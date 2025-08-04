@@ -18,24 +18,6 @@ export async function generateStaticParams() {
   return newsList.map(news => ({ slug: slugify(news.title) }));
 }
 
-const latestNews = [
-  {
-    title: "IMO STATE LAUNCHES MAJOR BROADBAND EXPANSION TO...",
-    date: "MAY 30, 2025",
-    img: "/images/homeImage1.png",
-  },
-  {
-    title: "IMO STATE LAUNCHES MAJOR BROADBAND EXPANSION TO...",
-    date: "MAY 30, 2025",
-    img: "/images/homeImage1.png",
-  },
-  {
-    title: "IMO STATE LAUNCHES MAJOR BROADBAND EXPANSION TO...",
-    date: "MAY 30, 2025",
-    img: "/images/homeImage1.png",
-  },
-];
-
 export default async function NewsDetailPage({params}:{params: {slug:string}}) {
   const {slug}= params;
  console.log(slug)
@@ -61,7 +43,7 @@ export default async function NewsDetailPage({params}:{params: {slug:string}}) {
           {/* Title & Meta */}
           <div className="relative z-10 w-full flex justify-center pb-2">
             <div className="w-full max-w-3xl rounded-xl overflow-hidden shadow-lg">
-              <Image src={'/images/homeImage1.png'} alt="News Hero" width={900} height={400} className="object-cover w-full h-[260px] md:h-[320px]" />
+              <Image src={news.img} alt="News Hero" width={900} height={400} className="object-fits w-full h-[260px] lg:h-[400px]" />
             </div>
           </div>
           <div className="text-center">
@@ -77,10 +59,10 @@ export default async function NewsDetailPage({params}:{params: {slug:string}}) {
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-white text-xl font-semibold mb-6">LATEST NEWS</h2>
           <div className="flex flex-col md:flex-row gap-6">
-            {latestNews.map((item, idx) => (
+            {newsList.map((item, idx) => (
               <div key={idx} className="bg-[#232323] rounded-xl overflow-hidden flex-1 min-w-[220px] max-w-xs">
                 <div className="relative w-full h-28">
-                  <Image src={item.img} alt={item.title} fill className="object-cover" />
+                  <Image src={item.img} alt={item.title} fill className="object-fit" />
                 </div>
                 <div className="p-4">
                   <div className="text-white text-xs font-semibold mb-2 line-clamp-2">{item.title}</div>
