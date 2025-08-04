@@ -25,8 +25,8 @@ export default function AboutUs() {
                 altText="Ministry of Budget, Economic Planning and Statistics conference event" 
             />
             <MVSSection />
-            <ObjectivesSection />
             <TeamGridSection members={teamMembers} />
+            <ObjectivesSection />
             <StructuresSection 
                 imgSrc="/images/building.png"
             />
