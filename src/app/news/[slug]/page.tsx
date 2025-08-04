@@ -18,8 +18,8 @@ export async function generateStaticParams() {
   return newsList.map(news => ({ slug: slugify(news.title) }));
 }
 
-export default async function NewsDetailPage({params}:{params: {slug:string}}) {
-  const {slug}= params;
+export default async function NewsDetailPage({params}:{params: Promise<{slug:string}>}) {
+  const {slug}= await params;
  console.log(slug)
 
   const news = newsList.find(item => item.title === decodeURIComponent(slug));
