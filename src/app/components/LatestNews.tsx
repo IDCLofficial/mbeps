@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {motion} from "framer-motion"
 import { AppLink } from "./AppLink";
-import newsList from "../news/newsList";
+import newsList from "../../../data/newsList";
 
 // Sort newsList by date descending and take top 3
 const topNews = [...newsList].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 3);

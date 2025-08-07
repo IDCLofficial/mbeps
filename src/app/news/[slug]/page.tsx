@@ -4,7 +4,7 @@ import NewsHeroSection from "./NewsHeroSection";
 import NewsBodySection from "./NewsBodySection";
 import CTASection from "@/app/components/CTASection";
 import SocialShareBar from "../SocialShareBar";
-import newsList from "../newsList";
+import newsList from "../../../../data/newsList";
 
 
 function slugify(title: string): string {

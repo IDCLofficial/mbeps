@@ -7,21 +7,32 @@ import { SubsequentHero } from "../components/Hero";
 import MediaSearchBar from "./MediaSearchBar";
 import SearchBar from "../components/SearchBar";
 import { Title } from "../components/Title";
+import { Media } from "../../../data/media";
 
 interface MediaHeroSectionProps {
   title: string;
   subtitle: string;
   backgroundImage: string;
+  onSearchResults?: (results: typeof Media, query: string) => void;
 }
 
-const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle, backgroundImage }) => {
+const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle, backgroundImage, onSearchResults }) => {
   const [query, setQuery] = useState("");
 
-  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    // Implement your search logic here (e.g., filter media, update state, etc.)
-    alert(`Searching for: ${query}`);
-  };
+  // Filter media items as the user types and notify parent
+  React.useEffect(() => {
+    if (query.trim() === "") {
+      if (onSearchResults) onSearchResults([], "");
+      return;
+    }
+    
+    // Filter media items based on query
+    const results = Media.filter(item => 
+      item.title.toLowerCase().includes(query.toLowerCase())
+    );
+    
+    if (onSearchResults) onSearchResults(results, query);
+  }, [query, onSearchResults]);
 
   return (
     <SubsequentHero className="bg-[url('/images/gradient.png')]">
@@ -33,7 +44,7 @@ const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle, ba
         <FadeUpTransition transition={{ delay: 0.15 }}>
           <p className="text-white text-lg md:text-[16px] max-w-2xl drop-shadow-lg">{subtitle}</p>
         </FadeUpTransition>
-        <SearchBar placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value) } onSearch={handleSearch} />
+        <SearchBar placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value) } onSearch={(e) => e.preventDefault()} />
       </div>
     </SubsequentHero>
   );

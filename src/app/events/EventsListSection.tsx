@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import events from "./eventsList";
+import events from "../../../data/eventsList";
 
 export default function EventsListSection() {
   return (

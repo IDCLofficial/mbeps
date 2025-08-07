@@ -14,19 +14,19 @@ const links = [
     title: "2025 Citizens’ Budget",
     desc: "Download the 2025 Citizens’ Budget for a detailed overview of state allocations and priorities.",
     img: "/images/documents/bill.jpg",
-    href: "/documents/IMSG_2025_Citizens_Budget.pdf"
+    href: "/docs/IMSG_2025_Citizens_Budget.pdf"
   },
   {
     title: "2025 Q1 Budget Report",
     desc: "Access the 2025 Citizens’ Budget translated into Igbo for inclusive and transparent governance.",
     img: "/images/documents/bill.jpg",
-    href: "/documents/IMSG_2025_Q1_Budget_Report.pdf"
+    href: "/docs/IMSG_2025_Q1_Budget_Report.pdf"
   },
   {
     title: "2025 Q2 Budget Report",
     desc: "Review the 2024 Budget Performance Report to see how funds were allocated and utilized.",
     img: "/images/documents/bill.jpg",
-    href: "/documents/IMSG_2025_Q2_Budget_Report.pdf"
+    href: "/docs/IMSG_2025_Q2_Budget_Report.pdf"
   },
 ];
 

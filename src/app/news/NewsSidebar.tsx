@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BiChevronDown } from "react-icons/bi";
-import {newsList} from "./newsList"
+import {newsList} from "../../../data/newsList"
 
 const categories = [
   { name: "Latest Updates", count: 12 },

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { departments } from "../departments/departments";
+import { departments } from "../../../data/departments";
 
 interface StructuresSectionProps {
     imgSrc: string;

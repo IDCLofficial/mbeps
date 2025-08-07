@@ -2,7 +2,7 @@
 
 import SearchBar from "../components/SearchBar";
 import { useState } from "react";
-import newsList from "./newsList";
+import newsList from "../../../data/newsList";
 import Link from "next/link";
 import { SubsequentHero } from "../components/Hero";
 import { Title } from "../components/Title";

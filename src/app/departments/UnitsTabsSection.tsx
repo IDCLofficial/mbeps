@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { departments } from "./departments";
+import { departments } from "../../../data/departments";
 
 export default function UnitsTabsSection() {
   const [activeIdx, setActiveIdx] = useState(0);

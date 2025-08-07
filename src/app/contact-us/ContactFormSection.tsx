@@ -3,6 +3,8 @@ import React, { useState } from "react";
 
 const ContactFormSection = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -10,7 +12,20 @@ const ContactFormSection = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // handle form submission (e.g., send to API)
+    setIsSubmitting(true);
+    setIsSuccess(false);
+    
+    // Simulate API call
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSuccess(true);
+      setForm({ name: "", email: "", message: "" });
+      
+      // Hide success message after 5 seconds
+      setTimeout(() => {
+        setIsSuccess(false);
+      }, 5000);
+    }, 1500);
   };
 
   return (
@@ -46,10 +61,16 @@ const ContactFormSection = () => {
         />
         <button
           type="submit"
-          className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded font-medium mt-2 cursor-pointer"
+          disabled={isSubmitting}
+          className={`w-full py-2 rounded font-medium mt-2 cursor-pointer ${isSubmitting ? 'bg-gray-500' : 'bg-green-600 hover:bg-green-700'} text-white`}
         >
-          Submit
+          {isSubmitting ? 'Sending...' : 'Submit'}
         </button>
+        {isSuccess && (
+          <div className="text-green-500 text-center py-2">
+            Message sent successfully! We&apos;ll get back to you soon.
+          </div>
+        )}
       </form>
     </div>
   );

@@ -27,7 +27,7 @@ const MediaGalleryGrid: React.FC<MediaGalleryGridProps> = ({ items }:MediaGaller
   )
 
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center pb-3">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full py-12 px-8">
         {currentItems.map((item, idx) => (
           <MediaGalleryCard key={idx} image={item.image} title={item.title} isVideo={item.isVideo} />

@@ -3,7 +3,7 @@ import { use } from "react";
 import Image from "next/image";
 import ReadySection from "../../news/ReadySection";
 import Footer from "../../components/Footer";
-import events from "../eventsList";
+import events from "../../../../data/eventsList";
 import { useEffect, useState } from "react";
 
 function Countdown({ eventDateTime }: { eventDateTime: string }) {
@@ -107,7 +107,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
             alt={event.title}
             width={1024}
             height={600}
-            className="object-cover w-full h-[180px] md:h-[480px] rounded-none"
+            className="object-fill w-full h-[180px] md:h-[480px] rounded-none"
             priority
           />
           <div className="static md:absolute md:bottom-6 md:right-10 z-10 mt-4 md:mt-0 flex justify-center w-full">

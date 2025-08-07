@@ -1,6 +1,6 @@
 "use client"
 
-import { departments } from "../departments/departments";
+import { departments } from "../../../data/departments";
 import { AppLink } from "./AppLink";
 import {motion } from "framer-motion"
 

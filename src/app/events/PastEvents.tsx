@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useRef } from "react";
-import events from "./eventsList";
+import events from "../../../data/eventsList";
 import Image from "next/image";
 import Link from "next/link";
 

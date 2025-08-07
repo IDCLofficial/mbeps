@@ -1,3 +1,9 @@
+type Speaker = {
+  img: string;
+  name: string;
+  role: string;
+};
+
 type event = {
   slug: string,
   date: string,
@@ -9,10 +15,9 @@ type event = {
   organizer: string,
   phone: string,
   address: string,
-  speakers: [],
+  speakers: Speaker[],
 }
-
 
 const events:event[] = [];
 
-export default events; 
+export default events;
