@@ -2,7 +2,7 @@
 
 export const Media = [
    {
-    image:"/images/commissioner.png",
+    image:"/images/commissioner.jpg",
     title: "The commissioner",
     isVideo: false
     },

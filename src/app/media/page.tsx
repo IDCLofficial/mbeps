@@ -37,7 +37,6 @@ export default function MediaPage() {
       <MediaHeroSection
         title="Digital Stories of Impact"
         subtitle="Explore our gallery of photos, videos, and press releases capturing our journey toward a digitally empowered Imo State."
-        backgroundImage="/images/heroImage.png"
         onSearchResults={handleSearchResults}
       />
       <MediaGalleryGrid items={displayItems} />
@@ -56,7 +55,6 @@ export default function MediaPage() {
       <MediaHeroSection
         title="Digital Stories of Impact"
         subtitle="Explore our gallery of photos, videos, and press releases capturing our journey toward a digitally empowered Imo State."
-        backgroundImage="/images/heroImage.png"
         onSearchResults={handleSearchResults}
       />
       <section className="w-full max-w-7xl mx-auto py-12 px-4">

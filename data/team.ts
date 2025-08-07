@@ -1,8 +1,8 @@
 export const team = [
     {
-        name: "Dr. (Rt. Hon.) C.C. Osuala",
+        name: "Hon. Anselem A. Ezechinyere",
         position: "Commissioner",
-        imgSrc: "/images/commissioner2.jpg" // Use a placeholder or real image if available
+        imgSrc: "/images/commissioner.jpg" // Use a placeholder or real image if available
     },
     {
         name: "Prince Chibuzo B. Obinna",

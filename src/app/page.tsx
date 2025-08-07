@@ -1,16 +1,11 @@
-import { AppLink } from "@/app/components/AppLink";
 import { Hero } from "@/app/components/Hero";
-import { Title } from "@/app/components/Title";
-import Image from "next/image";
 import AboutSection from "@/app/components/AboutSection";
 import AboutCommisioner from "@/app/components/AboutCommisioner";
 import QuickLinks from "@/app/components/QuickLinks";
 import LatestNews from "@/app/components/LatestNews";
-import FeaturedPartners from "@/app/components/FeaturedPartners";
 import Stats from "@/app/components/Stats";
 import CTASection from "@/app/components/CTASection";
 import Footer from "@/app/components/Footer";
-import Advertisement from "@/app/components/Advertisement";
 import Publications from "./components/Publications";
 import { Departments } from "./components/Departments";
 
@@ -25,11 +20,11 @@ export default function Home() {
       <AboutSection 
         title="About Us"
         subtitle="The Imo State Ministry of Budget, Economic Planning, and Statistics is committed to providing a transparent and effective budgeting system while strengthening economic planning and data reliability across the state."
-        image1="/images/homeImage1.jpg"
+        image1="/images/homeImage.png"
         image2="/images/homeImage2.jpg"
       />
       <AboutCommisioner 
-        imgSrc="/images/commissioner.png" 
+        imgSrc="/images/commissioner.jpg" 
         title="About The Commissioner" 
       />
       <Departments />

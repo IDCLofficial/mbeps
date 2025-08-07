@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image";
 import {motion} from "framer-motion"
 import Link from "next/link";
 
@@ -41,7 +40,7 @@ export default function QuickLinks() {
       <h2 className="text-dark-primary text-3xl md:text-[43px] lg:text-[43px] font-medium text-center mb-8 md:mb-12">Quick Links</h2>
       <div className="w-full mx-auto grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-4 gap-6 sm:gap-4 lg:gap-8 px-0 lg:px-4">
         {links.map((link, idx) => (
-          <div key={link.title} className="bg-white flex flex-col items-center h-full relative">
+          <div key={idx} className="bg-white flex flex-col items-center h-full relative">
             {/* <div className="relative w-full h-[140px] md:h-[200px] z-0">
               <Image src={link.img} alt={link.title} fill className="object-cover" />
             </div> */}

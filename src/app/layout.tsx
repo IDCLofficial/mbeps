@@ -3,7 +3,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import { Navbar } from "@/app/components/Navbar";
-import PageTransitionWrapper from "@/app/components/PageTransitionWrapper";
 import Sidebar from "@/app/components/Sidebar";
 import { useState } from "react";
 

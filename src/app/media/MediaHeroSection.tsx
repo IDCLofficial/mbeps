@@ -1,10 +1,8 @@
 'use client';
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { FadeUpTransition } from "../components/PageTransition";
 import { SubsequentHero } from "../components/Hero";
-import MediaSearchBar from "./MediaSearchBar";
 import SearchBar from "../components/SearchBar";
 import { Title } from "../components/Title";
 import { Media } from "../../../data/media";
@@ -12,11 +10,10 @@ import { Media } from "../../../data/media";
 interface MediaHeroSectionProps {
   title: string;
   subtitle: string;
-  backgroundImage: string;
   onSearchResults?: (results: typeof Media, query: string) => void;
 }
 
-const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle, backgroundImage, onSearchResults }) => {
+const MediaHeroSection: React.FC<MediaHeroSectionProps> = ({ title, subtitle, onSearchResults }) => {
   const [query, setQuery] = useState("");
 
   // Filter media items as the user types and notify parent

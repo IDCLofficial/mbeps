@@ -1,8 +1,6 @@
 import NewsHeroSection from "./NewsHeroSection";
 import NewsSidebar from "./NewsSidebar";
-import NewsSearchBar from "../components/SearchBar";
 import NewsGrid from "./NewsGrid";
-import ReadySection from "./ReadySection";
 import Footer from "../components/Footer";
 import CTASection from "../components/CTASection";
 

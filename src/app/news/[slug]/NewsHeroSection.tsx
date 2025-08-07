@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-
 
 const NewsHeroSection = () => (
   <section className="relative w-full h-[400px] md:h-[380px] flex items-end justify-center bg-gradient-to-b from-green-900 via-green-700 to-green-400 overflow-hidden">

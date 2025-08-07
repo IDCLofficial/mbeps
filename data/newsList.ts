@@ -9,7 +9,7 @@ export const newsList = [
   {
     title: "Imo State Releases Citizens’ Budget",
     date: "April 30, 2025",
-    img: "/images/commissioner2.jpg",
+    img: "/images/bill.jpg",
     badge: "Inclusion",
     desc: "To promote inclusivity, the Ministry has published the 2025 Citizens’ Budget in both English and Igbo, making fiscal information accessible to all residents."
   },

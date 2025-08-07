@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { Title } from "./Title";
 import { AppLink } from "./AppLink";
-import PageTransition from "./PageTransition";
 import {motion} from "framer-motion"
 
 interface AboutSectionProps {
@@ -44,11 +43,11 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
             </div>
         </motion.div>
         {/* Right: Images */}
-          <div className="flex flex-col md:flex-row items-center gap-4 md:gap-8 w-full justify-start">
-              <div className="relative rounded-lg overflow-hidden w-full md:w-[70%] h-[180px] md:h-[300px] max-lg:hidden">
+          <div className="flex flex-col md:flex-row items-center gap-4 w-full justify-start">
+              <div className="relative rounded-lg overflow-hidden w-full md:w-[70%] h-[180px] md:h-[300px] lg:h-[350px] max-lg:hidden">
                   <Image src={image1} alt="Mandate 1" fill className="object-fit" />
               </div>
-              <div className="relative rounded-lg overflow-hidden w-full lg:w-[30%]  h-[180px] md:h-[300px] flex items-center justify-center">
+              <div className="relative rounded-lg overflow-hidden w-full lg:w-[30%]  h-[180px] md:h-[300px] lg:h-[350px] flex items-center justify-center">
                   <Image src={image2} alt="Mandate 2" fill className="object-fit" />
               </div>
           </div>

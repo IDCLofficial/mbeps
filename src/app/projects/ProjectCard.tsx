@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { AppLink } from "../components/AppLink";
 
 interface ProjectCardProps {
   title: string;

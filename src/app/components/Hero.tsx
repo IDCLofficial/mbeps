@@ -21,11 +21,6 @@ const heroData: HeroSlide[] = [
     {
         caption: "Driving Economic inclusion through strategic planning.",
         bgImage: "/images/governor.png"
-    },
-    {
-        caption: "Transparency, Innovation, and Progress in Fiscal Management",
-        subtitle: "Together, we drive sustainable progress.",
-        bgImage: "/images/commissioner2.jpg"
     }
 ];
 
