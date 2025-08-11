@@ -26,7 +26,7 @@ export const events: event[] = [
     title: "Signing of the ₦807 Billion 2025 Appropriation Bill into Law",
     description: "Governor Hope Uzodimma formally signed the revised 2025 Appropriation Bill—now ₦807.08 billion—into law, pledging full and faithful implementation and reinforcing alignment between the executive and legislature to drive infrastructure, industrialization, and economic transformation.",
     img: "/images/events/budget-signing-2025.webp",
-    time: "Morning Ceremony",
+    time: "10:00am",
     organizer: "Imo State Government / Ministry of Budget & Economic Planning",
     phone: "",
     address: "New Exco Chambers, Government House, Owerri",
