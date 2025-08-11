@@ -28,7 +28,7 @@ export default function LatestNews() {
           <Link href={`/news/${item.title}`} key={idx} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col
           hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="relative w-full h-[140px] md:h-[240px]">
-              <Image src={item.img} alt={item.title} fill className="object-fill w-full" />
+              <Image src={item.img} alt={item.title} width={500} height={500} className="object-cover h-full w-full" />
             </div>
             <div className="w-full p-4 md:p-5 flex-1 flex flex-col">
               <h3 className="text-dark-secondary text-xs md:text-[15px] font-bold text-gray-900 mb-2 uppercase leading-snug">{item.title}</h3>

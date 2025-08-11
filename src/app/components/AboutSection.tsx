@@ -32,7 +32,7 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
                 </h2>
             </div>
             <div className="relative rounded-lg overflow-hidden w-full lg:w-[70%] h-[180px] md:h-[280px] lg:hidden">
-              <Image src={image1} alt="Mandate 1" fill className="object-cover" />
+              <Image src={image1} alt="Mandate 1" width={500} height={500} className="object-cover h-full w-full" />
             </div>
             <div className="w-full lg:w-auto">
                 <p className="text-gray-200 text-base my-6 lg:max-w-lg text-justify">
@@ -45,10 +45,10 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
         {/* Right: Images */}
           <div className="flex flex-col md:flex-row items-center gap-4 w-full justify-start">
               <div className="relative rounded-lg overflow-hidden w-full md:w-[70%] h-[180px] md:h-[300px] lg:h-[350px] max-lg:hidden">
-                  <Image src={image1} alt="Mandate 1" fill className="object-fit" />
+                  <Image src={image1} alt="Mandate 1" width={500} height={500} className="object-cover h-full w-full" />
               </div>
               <div className="relative rounded-lg overflow-hidden w-full lg:w-[30%]  h-[180px] md:h-[300px] lg:h-[350px] flex items-center justify-center">
-                  <Image src={image2} alt="Mandate 2" fill className="object-fit" />
+                  <Image src={image2} alt="Mandate 2" width={500} height={500} className="object-cover h-full w-full" />
               </div>
           </div>
           <AppLink href="/about-us" label="Learn More" variant="secondary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium
