@@ -22,7 +22,7 @@ export default function AboutCommisioner({imgSrc, title}: AboutCommisionerProps)
                     src={imgSrc}
                     alt="Commissioner"
                     fill
-                    className="object-fit object-center rounded-xl w-full"
+                    className="object-cover h-full rounded-xl w-full"
                     sizes="(max-width: 768px) 220px, 320px"
                     />
                 </div>
