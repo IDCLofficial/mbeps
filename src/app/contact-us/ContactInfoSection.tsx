@@ -1,15 +1,12 @@
 import React from "react";
-import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF} from "react-icons/fa";
 
 const contactInfo = {
   address: "Block 6, 3rd floor, State Secretarait, Port Harcourt Road , Owerri",
   email: "info@mbeps.im.gov.ng",
-  phone: "+234 803 123 4567",
+  phone: "+234 803 888 3655",
   socials: [
-    { icon: <FaFacebookF />, href: "#" },
-    { icon: <FaTwitter />, href: "#" },
-    { icon: <FaInstagram />, href: "#" },
-    { icon: <FaLinkedinIn />, href: "#" },
+    { icon: <FaFacebookF />, href: "https://web.facebook.com/profile.php?id=100064687416933" },
   ],
 };
 

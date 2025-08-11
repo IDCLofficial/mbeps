@@ -45,7 +45,7 @@ const info = {
     ],
     contact: [
         {
-            label: "+2349130270514",
+            label: "+234 803 888 3655",
             href: "/"
         },
         {
