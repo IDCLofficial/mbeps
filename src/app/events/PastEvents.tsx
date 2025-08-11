@@ -6,12 +6,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 function isPastEvent(eventDateStr: string) {
-    // Try to parse date (optionally with time)
+    // Use fixed current date for consistency
+    const now = new Date();
     const parsed = Date.parse(eventDateStr);
     if (!isNaN(parsed)) {
-        return parsed < Date.now();
+        return parsed < now.getTime();
     }
-    // fallback: try to parse with time if available
     return false;
 }
 

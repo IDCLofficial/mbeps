@@ -3,14 +3,20 @@ import Link from "next/link";
 import events from "../../../data/eventsList";
 
 export default function EventsListSection() {
+  const upcomingEvents = events.filter(event => {
+    const eventDate = new Date(event.date);
+    const now = new Date();
+    return eventDate >= now;
+  });
+
   return (
     <section className="w-full mx-auto py-16 px-4 md:px-8">
       <h2 className="text-2xl md:text-2xl font-medium mb-8">Upcoming Events</h2>
-      {events.length === 0 ? (
+      {upcomingEvents.length === 0 ? (
         <div className="text-center text-gray-500 py-12 text-lg">No upcoming events at this time. Please check back later.</div>
       ) : (
         <div className="flex flex-col gap-8">
-          {events.map((event, idx) => (
+          {upcomingEvents.map((event, idx) => (
             <div key={idx} className="flex flex-col md:flex-row gap-6 items-center border-b border-b-[#C8C8C8] pb-8 last:border-b-0">
               <div className="w-full md:w-64 h-40 relative rounded overflow-hidden flex-shrink-0">
                 <Image src={event.img} alt={event.title} fill className="object-cover" />
