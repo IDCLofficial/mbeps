@@ -20,6 +20,22 @@ type event = {
 
 export const events: event[] = [
   {
+    slug: "2026 budget preparation",
+    date: "January 1, 2025",
+    location: "Government House, Owerri, Imo State",
+    title: "2026 Budget Preparation",
+    description: "The Ministry of Budget & Economic Planning is currently preparing the 2026 budget, which will be presented to the State House of Assembly in the first quarter of 2025.",
+    img: "/images/events/budget-signing-2025.webp",
+    time: "10:00 am",
+    organizer: "Imo State Government / Ministry of Budget & Economic Planning",
+    phone: "",
+    address: "Government House, Owerri",
+    speakers: [
+      { name: "Sen. Hope Uzodimma", img: "/images/events/Hope-Uzodinma.png", role: "Governor of Imo State (Signer)" },
+      { name: "Anselm Anyanwu-Ezechinyere", img: "/images/commissioner.jpg", role: "Commissioner, Budget & Economic Planning" }
+    ],
+  },
+  {
     slug: "budget-signing-2025-law",
     date: "January 1, 2025",
     location: "Government House, Owerri, Imo State",

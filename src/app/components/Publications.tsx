@@ -50,7 +50,7 @@ export default function Publications() {
                   <h3 className={`text-dark-secondary text-base font-bold mb-2`}>{link.title}</h3>
                   <p className="text-dark-primary-body text-[1rem] mb-4 md:mb-6">{link.desc}</p>
                 </div>
-                <AppLink href={link.href} label="Download" variant="secondary" className="border border-1 border-primary-green text-[14px] px-[10px] py-[6px] rounded-[3.4px] 
+                <AppLink href={link.href} label="Download" variant="secondary" className="border border-primary-green text-[14px] px-[10px] py-[6px] rounded-[3.4px] 
                 font-medium hover:bg-primary-green hover:text-white transition-all duration-300 w-max" download />
                 
             </div>
