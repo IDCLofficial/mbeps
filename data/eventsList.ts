@@ -24,7 +24,7 @@ export const events: event[] = [
     date: "November 5, 2025",
     location: "Government House, Owerri, Imo State",
     title: "2026 Budget Preparation",
-    description: "The Ministry of Budget & Economic Planning is currently preparing the 2026 budget, which will be presented to the State House of Assembly in the first quarter of 2025.",
+    description: "The Ministry of Budget & Economic Planning is currently preparing the 2026 budget, which will be presented to the State House of Assembly in the last quarter of 2025.",
     img: "/images/events/budget-signing-2025.webp",
     time: "10:00 am",
     organizer: "Imo State Government / Ministry of Budget & Economic Planning",
