@@ -21,7 +21,7 @@ type event = {
 export const events: event[] = [
   {
     slug: "2026 budget preparation",
-    date: "January 1, 2025",
+    date: "November 5, 2025",
     location: "Government House, Owerri, Imo State",
     title: "2026 Budget Preparation",
     description: "The Ministry of Budget & Economic Planning is currently preparing the 2026 budget, which will be presented to the State House of Assembly in the first quarter of 2025.",
