@@ -1,20 +1,14 @@
 "use client"
-
 import SearchBar from "../components/SearchBar";
 import { useState } from "react";
-import newsList from "../../../data/newsList";
 import Link from "next/link";
 import { SubsequentHero } from "../components/Hero";
 import { Title } from "../components/Title";
+import { NewsPost } from "../../../lib/types";
 
-interface News {
-  title: string;
-  date: string;
-}
-
-export default function NewsHeroSection() {
+export default function NewsHeroSection({newsList}: {newsList: NewsPost[]}) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [results, setResults] = useState<News[]>([]);
+  const [results, setResults] = useState<{ title: string; date: string } []>([]);
   const [showDropdown, setShowDropdown] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,10 +19,10 @@ export default function NewsHeroSection() {
       setShowDropdown(false);
       return;
     }
-    const filtered = newsList.filter(item =>
-      item.title.toLowerCase().includes(value.toLowerCase())
+    const filtered: NewsPost[] = newsList?.filter(item =>
+      item?.fields.title.toLowerCase().includes(value.toLowerCase())
     );
-    setResults(filtered);
+    setResults(filtered.map(item => ({ title: item?.fields.title, date: item?.sys.createdAt })));
     setShowDropdown(true);
   };
 
@@ -39,11 +33,13 @@ export default function NewsHeroSection() {
   };
 
   return (
-    <SubsequentHero className="bg-[url('/images/gradient.png')]">
-      <div className="relative z-10 flex flex-col items-center justify-center gap-2 w-full h-full px-4 lg:px-0">
-        <Title label="News"/>
-        <h1 className="text-white text-3xl lg:text-5xl font-bold text-center leading-tight">
-          Stay Updated
+    <SubsequentHero className="bg-[url('/images/projectsHero.png')] bg-cover bg-center">
+      <div className="relative z-10 flex justify-center">
+        <Title label="News" />
+      </div>
+      <div className="relative z-10 flex flex-col items-center justify-center w-full px-4 md:px-0">
+        <h1 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold text-center leading-tight">
+          Stay Up to Date
         </h1>
         <div className="w-full flex flex-col items-center justify-center relative max-w-xl mx-auto">
           <div className="w-full relative">
@@ -51,7 +47,7 @@ export default function NewsHeroSection() {
             {showDropdown && (
               <div className="absolute left-0 right-0 top-[70%] mt-2 bg-white border border-gray-200 rounded-lg shadow-xl z-30 max-h-60 overflow-y-auto w-full">
                 {results.length > 0 ? (
-                  results.map((item, idx) => (
+                  results.map((item: { title: string; date: string }, idx) => (
                     <Link href={`/news/${item.title}`} key={idx} className="px-4 py-3 hover:bg-gray-100 cursor-pointer flex flex-col border-b last:border-b-0">
                       <span className="font-semibold text-gray-800 text-base">{item.title}</span>
                       <span className="text-xs text-gray-500">{item.date}</span>

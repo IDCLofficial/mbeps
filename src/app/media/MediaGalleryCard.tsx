@@ -5,20 +5,24 @@ interface MediaGalleryCardProps {
   image: string;
   title: string;
   isVideo?: boolean;
+  onClick?: () => void;
 }
 
-const MediaGalleryCard: React.FC<MediaGalleryCardProps> = ({ image, title, isVideo }) => {
+const MediaGalleryCard: React.FC<MediaGalleryCardProps> = ({ image, title, isVideo, onClick }) => {
   return (
-    <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col cursor-pointer transition hover:shadow-md">
+    <div
+      className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col cursor-pointer transition hover:shadow-md"
+      onClick={onClick}
+    >
       <div className="relative w-full h-[300px]">
-        <Image src={image} alt={title} width={500} height={500} className="object-cover h-full w-full" />
+        <Image src={image} alt={title} width={500} height={500} className="object-cover h-full w-full object-[50%_20%]" />
         {isVideo && (
-          <a href="#" className="absolute inset-0 flex items-center justify-center">
+          <span className="absolute inset-0 flex items-center justify-center">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
               <circle cx="24" cy="24" r="24" fill="red" />
               <polygon points="20,16 34,24 20,32" fill="#fff" />
             </svg>
-          </a>
+          </span>
         )}
       </div>
       <div className="p-4 flex-1 flex flex-col">
@@ -28,4 +32,4 @@ const MediaGalleryCard: React.FC<MediaGalleryCardProps> = ({ image, title, isVid
   );
 };
 
-export default MediaGalleryCard; 
+export default MediaGalleryCard;

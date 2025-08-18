@@ -8,8 +8,12 @@ import CTASection from "@/app/components/CTASection";
 import Footer from "@/app/components/Footer";
 import Publications from "./components/Publications";
 import { Departments } from "./components/Departments";
+import { getNewsList } from "./news/newsList";
+import { NewsPost } from "../../lib/types";
 
-export default function Home() {
+export default async function Home() {
+  const newsList = await getNewsList();
+  
   return (
     <div className="h-screen w-full">
       <Hero
@@ -32,7 +36,7 @@ export default function Home() {
         <Publications />
         <QuickLinks />
         {/* <Advertisement /> */}
-        <LatestNews />
+        <LatestNews newsList={newsList as unknown as NewsPost[]}/>
       </section>
       <Stats />
       {/* <FeaturedPartners /> */}

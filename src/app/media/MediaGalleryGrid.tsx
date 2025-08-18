@@ -1,56 +1,70 @@
 "use client"
-
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import MediaGalleryCard from "./MediaGalleryCard";
-
-interface MediaItem {
-  image: string;
-  title: string;
-  isVideo?: boolean;
-}
+import { Media } from "../../../lib/types";
+import SearchBar from "../components/SearchBar";
+import ImageViewer from "./ImageViewer";
 
 interface MediaGalleryGridProps {
-  items: MediaItem[];
+  items: Media[];
 }
 
-const MEDIA_PER_PAGE = 9;
+const MediaGalleryGrid: React.FC<MediaGalleryGridProps> = ({ items }) => {
+  const [query, setQuery] = useState("");
+  const [viewerOpen, setViewerOpen] = useState(false);
+  const [viewerSrc, setViewerSrc] = useState<string>("");
+  const [viewerAlt, setViewerAlt] = useState<string>("");
 
-const MediaGalleryGrid: React.FC<MediaGalleryGridProps> = ({ items }:MediaGalleryGridProps) => {
-  const [page, setPage] = useState(0);
-  const totalPages = Math.ceil(items.length / MEDIA_PER_PAGE);
-  const start = page * MEDIA_PER_PAGE;
-  const end = start + MEDIA_PER_PAGE;
-  const currentItems = items.slice(start, end);
-
-  if(items.length === 0) return(
-    <p className="text-2xl">No media Items found</p>
-  )
-
+  const openViewer = (src: string, alt: string) => {
+    setViewerSrc(src);
+    setViewerAlt(alt);
+    setViewerOpen(true);
+  };
+  const filteredItems = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return items;
+    return items.filter((item) => {
+      const title = item?.fields?.title ?? "";
+      return String(title).toLowerCase().includes(q);
+    });
+  }, [items, query]);
   return (
-    <div className="w-full flex flex-col items-center pb-3">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full py-12 px-8">
-        {currentItems.map((item, idx) => (
-          <MediaGalleryCard key={idx} image={item.image} title={item.title} isVideo={item.isVideo} />
-        ))}
-      </div>
-      <div className="flex gap-4 mt-8">
-        <button
-          onClick={() => setPage((p) => Math.max(0, p - 1))}
-          disabled={page === 0}
-          className="px-4 py-2 rounded bg-gray-200 text-gray-700 disabled:opacity-50 cursor-pointer"
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
-          disabled={page === totalPages - 1}
-          className="px-4 py-2 rounded bg-primary-green text-white disabled:opacity-50 cursor-pointer"
-        >
-          Next
-        </button>
-      </div>
-    </div>
+    <>
+      <SearchBar
+        placeholder="Search"
+        value={query}
+        onChange={(e) => setQuery(e.target.value)}
+        onSearch={(e) => e.preventDefault()}
+      />
+      {filteredItems.length === 0 ? (
+        <div className="w-full flex flex-col items-center justify-center py-8">
+          <h1 className="text-2xl font-medium">No media items found</h1>
+        </div>
+      ) : (
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredItems.map((item, idx) => (
+            <MediaGalleryCard
+              key={idx}
+              image={`https:${item.fields.img.fields.file.url}`}
+              title={item.fields.title}
+              isVideo={item.fields.img.isVideo}
+              onClick={() => {
+                if (!item.fields.img.isVideo) {
+                  openViewer(`https:${item.fields.img.fields.file.url}`, item.fields.title);
+                }
+              }}
+            />
+          ))}
+        </div>
+      )}
+      <ImageViewer
+        open={viewerOpen}
+        src={viewerSrc}
+        alt={viewerAlt}
+        onClose={() => setViewerOpen(false)}
+      />
+    </>
   );
 };
 
-export default MediaGalleryGrid; 
+export default MediaGalleryGrid;

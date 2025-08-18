@@ -78,7 +78,7 @@ interface SubsequentHeroProps {
 
 export const SubsequentHero = ({ children, className }: SubsequentHeroProps) => {
     return (
-        <div className="relative h-[350px] md:min-h-[85vh] px-4 lg:px-[3rem] py-8 lg:py-10 flex flex-col gap-2 justify-center bg-gradient-to-r from-green-900/20 via-black to-black">
+        <div className="relative h-[85vh] px-4 lg:px-[3rem] py-8 lg:py-10 flex flex-col gap-2 justify-center bg-gradient-to-r from-green-900/20 via-black to-black">
             <div className={`absolute inset-0 bg-cover bg-center z-0 ${className}`}></div>
             {children}
         </div>
