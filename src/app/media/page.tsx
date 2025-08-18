@@ -19,9 +19,9 @@ export default async function MediaPage() {
         <MediaGalleryGrid items={media as unknown as Media[]} />
       </section>
       <CTASection 
-        heading="Together we can Promote Humanitarian Activities in Imo State" 
-        subtext="Want to get involved or partner with us? Reach out today" 
-        buttonLabel="Contact Us" 
+        heading="Partner with us for a Prosperous Imo"
+        subtext="Join us in shaping a transparent, data-driven, and sustainable future for all through effective budgeting and strategic economic planning."
+        buttonLabel="Contact Us"
         buttonHref="/contact-us"
       />
       <Footer />

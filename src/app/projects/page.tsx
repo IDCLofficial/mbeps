@@ -12,9 +12,9 @@ export default async function ProjectsPage() {
     <div className="bg-white">
       <ProjectHeroSection />
       <ProjectsSection projects={projects as unknown as Project[]} />
-      <CTASection
-        heading="Partner with Us Today!"
-        subtext="Join us as we bring hope to all helpless imolites In every community and on every street."
+      <CTASection 
+        heading="Partner with us for a Prosperous Imo"
+        subtext="Join us in shaping a transparent, data-driven, and sustainable future for all through effective budgeting and strategic economic planning."
         buttonLabel="Contact Us"
         buttonHref="/contact-us"
       />

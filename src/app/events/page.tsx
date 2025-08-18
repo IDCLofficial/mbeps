@@ -15,9 +15,9 @@ export default async function EventsPage() {
       <EventsListSection events={events as unknown as Events[]} />
       <PastEvents events={events as unknown as Events[]}/>
       <CTASection 
-        heading="Together we can Promote Humanitarian Efforts in Imo State"
-        subtext="Join us as we bring hope to all helpless imolites In every community and on every street."
-        buttonLabel="Contact Us" 
+        heading="Partner with us for a Prosperous Imo"
+        subtext="Join us in shaping a transparent, data-driven, and sustainable future for all through effective budgeting and strategic economic planning."
+        buttonLabel="Contact Us"
         buttonHref="/contact-us"
       />
       <Footer />

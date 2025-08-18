@@ -113,8 +113,8 @@ export default async function EventDetailPage({ params }: { params: Promise<{ sl
         </div>
       </section>
       <CTASection 
-        heading="Partner with Us Today!"
-        subtext="Join us as we bring hope to all helpless imolites In every community and on every street."
+        heading="Partner with us for a Prosperous Imo"
+        subtext="Join us in shaping a transparent, data-driven, and sustainable future for all through effective budgeting and strategic economic planning."
         buttonLabel="Contact Us"
         buttonHref="/contact-us"
       />

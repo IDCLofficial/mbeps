@@ -2,34 +2,47 @@
 import Image from "next/image";
 import NavLinks from "./NavLinks"
 import { FiMenu } from "react-icons/fi";
+import { useEffect, useState } from "react";
+import Sidebar from "./Sidebar";
 
-interface NavbarProps {
-  onOpenSidebar: () => void;
-}
-
-export const Navbar = ({ onOpenSidebar }: NavbarProps) => {
+export const Navbar = () => {
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+    
+    // Lock body scroll when sidebar is open
+    useEffect(() => {
+        if (sidebarOpen) {
+            const originalOverflow = document.body.style.overflow;
+            document.body.style.overflow = 'hidden';
+            return () => {
+                document.body.style.overflow = originalOverflow;
+            };
+        }
+    }, [sidebarOpen]);
     return(
-        <header className="flex justify-between items-center px-[1rem] sm:px-[2rem] lg:px-[3rem] py-[1.5rem] fixed top-0 left-0 right-0 z-50 border-b border-b-[0.1px] border-[#FFFFFF] bg-[#232c39]/50 backdrop-blur-sm">
-            <div className="flex items-center gap-3 mb-2">
-                    <Image src='/logo.png' alt="Imo State Logo" width={40} height={40} />
-                    {/* <span className="font-semibold text-sm text-white leading-tight max-md:hidden">
-                    Imo State Ministry<br />
-                    of Budget, Economic Planning and
-                    Statistics
-                    </span> */}
+        <>
+            <header className="flex justify-between items-center px-[1rem] sm:px-[2rem] lg:px-[3rem] py-[1.5rem] fixed top-0 left-0 right-0 z-50 border-b border-b-[0.1px] border-[#FFFFFF] bg-[#232c39]/50 backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-2">
+                        <Image src='/logo.png' alt="Imo State Logo" width={40} height={40} />
+                        {/* <span className="font-semibold text-sm text-white leading-tight max-md:hidden">
+                        Imo State Ministry<br />
+                        of Budget, Economic Planning and
+                        Statistics
+                        </span> */}
+                    </div>
+                {/* Desktop NavLinks */}
+                <div className="hidden lg:block">
+                    <NavLinks />
                 </div>
-            {/* Desktop NavLinks */}
-            <div className="hidden lg:block">
-                <NavLinks />
-            </div>
-            {/* Hamburger for Mobile */}
-            <button
-                className="lg:hidden text-white text-3xl focus:outline-none"
-                aria-label="Open navigation menu"
-                onClick={onOpenSidebar}
-            >
-                <FiMenu />
-            </button>
-        </header>
+                {/* Hamburger for Mobile */}
+                <button
+                    className="lg:hidden text-white text-3xl focus:outline-none"
+                    aria-label="Open navigation menu"
+                    onClick={() => setSidebarOpen(true)}
+                >
+                    <FiMenu />
+                </button>
+            </header>
+            <Sidebar open={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+        </>
     )
 }
