@@ -10,12 +10,14 @@ import Publications from "./components/Publications";
 import { Departments } from "./components/Departments";
 import { getNewsList } from "./news/newsList";
 import { NewsPost } from "../../lib/types";
+import Advert from "./components/economic-summit/Advert";
 
 export default async function Home() {
   const newsList = await getNewsList();
   
   return (
     <div className="h-screen w-full">
+      <Advert />
       <Hero
         // title="Imo State Ministry of Budget, Economic Planning & Statistics" 
         // caption="Empowering Imo’s Growth Through Strategic Planning and Sustainable Development." 
