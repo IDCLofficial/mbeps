@@ -38,7 +38,7 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
                 <p className="text-gray-200 text-base my-6 lg:max-w-lg text-justify">
                     {subtitle}
                 </p>
-                <AppLink href="/about-us" label="Learn More" variant="secondary" className="w-max border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium
+                <AppLink href="/about-us" label="Learn More" variant="secondary" className="w-max border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium
                 hover:bg-primary-green/80 hover:text-white transition-all duration-300 hidden lg:block"/>
             </div>
         </motion.div>
@@ -51,7 +51,7 @@ export default function AboutSection({title, subtitle, image1, image2}: AboutSec
                   <Image src={image2} alt="Mandate 2" width={500} height={500} className="object-cover h-full w-full" />
               </div>
           </div>
-          <AppLink href="/about-us" label="Learn More" variant="secondary" className="border border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium
+          <AppLink href="/about-us" label="Learn More" variant="secondary" className="border-1 border-primary-green text-[15px] px-[2rem] py-[12px] rounded-[3.4px] font-medium
           hover:bg-primary-green/80 hover:text-white transition-all duration-300 lg:hidden"/>
       </div>
     </section>

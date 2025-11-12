@@ -31,7 +31,7 @@ export default function UnitsTabsSection() {
         <div className="w-full mb-4">
           <Image src={active.image} alt={active.name} width={600} height={300} className="rounded-xl object-cover h-[300px]" />
         </div>
-        <p className="text-gray-700 text-sm md:text-[1rem] text-dark-primary-body">{active.description}</p>
+        <p className="text-sm md:text-[1rem] text-dark-primary-body">{active.description}</p>
       </div>
     </section>
   );
