@@ -11,6 +11,14 @@ import { Departments } from "./components/Departments";
 import { getNewsList } from "./news/newsList";
 import { NewsPost } from "../../lib/types";
 import Advert from "./components/economic-summit/Advert";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: { absolute: "Ministry of Budget & Economic Planning | Imo State Government" },
+  description: "Official website of the Ministry of Budget & Economic Planning, Imo State Government: services, departments, projects, news and events.",
+  path: "/",
+});
+
 
 export default async function Home() {
   const newsList = await getNewsList();

@@ -6,6 +6,14 @@ import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
 import { MVSSection } from "./MVSSection";
 import TeamGridSection from "./TeamGridSection";
+import { pageMetadata } from "@/lib/seo";
+
+export const metadata = pageMetadata({
+  title: "About Us",
+  description: "About the Ministry of Budget & Economic Planning of the Imo State Government: who we are and what we do.",
+  path: "/about-us",
+});
+
 
 export default function AboutUs() {
     return (
