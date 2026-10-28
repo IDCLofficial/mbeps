@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Media Gallery",
-  description: "Photo and media gallery of the Ministry of Budget & Economic Planning, Imo State Government.",
+  description: "Photo and media gallery of the Ministry of Budget, Economic Planning and Statistics, Imo State Government.",
   path: "/media",
 });
 

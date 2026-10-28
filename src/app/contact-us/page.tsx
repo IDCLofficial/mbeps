@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Contact Us",
-  description: "Contact the Ministry of Budget & Economic Planning, Imo State Government: office location and ways to reach the ministry.",
+  description: "Contact the Ministry of Budget, Economic Planning and Statistics, Imo State Government: office location and ways to reach the ministry.",
   path: "/contact-us",
 });
 

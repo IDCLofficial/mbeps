@@ -8,7 +8,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Projects",
-  description: "Projects and programmes of the Ministry of Budget & Economic Planning, Imo State Government.",
+  description: "Projects and programmes of the Ministry of Budget, Economic Planning and Statistics, Imo State Government.",
   path: "/projects",
 });
 

@@ -9,7 +9,7 @@ import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Events",
-  description: "Events organised by the Ministry of Budget & Economic Planning, Imo State Government.",
+  description: "Events organised by the Ministry of Budget, Economic Planning and Statistics, Imo State Government.",
   path: "/events",
 });
 

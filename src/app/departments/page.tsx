@@ -5,8 +5,8 @@ import CTASection from "../components/CTASection";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Departments",
-  description: "Departments and units of the Ministry of Budget & Economic Planning, Imo State Government.",
+  title: "Budget, Planning and Monitoring Departments",
+  description: "Budget, planning, monitoring and evaluation and international cooperation departments of the Imo State Ministry of Budget, Economic Planning and Statistics.",
   path: "/departments",
 });
 

@@ -14,8 +14,8 @@ import Advert from "./components/economic-summit/Advert";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: { absolute: "Ministry of Budget & Economic Planning | Imo State Government" },
-  description: "Official website of the Ministry of Budget & Economic Planning, Imo State Government: services, departments, projects, news and events.",
+  title: { absolute: "Imo State Ministry of Budget, Economic Planning and Statistics" },
+  description: "Imo State budget, economic planning and statistics: approved budgets, citizens' budget, budget reports, planning, and monitoring and evaluation.",
   path: "/",
 });
 
