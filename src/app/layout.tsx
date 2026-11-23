@@ -6,7 +6,9 @@ import { Navbar } from "@/app/components/Navbar";
 import type { Metadata } from "next";
 import { buildRootMetadata, jsonLd, organizationJsonLd } from "@/lib/seo";
 
-export const metadata: Metadata = buildRootMetadata();
+export const metadata: Metadata = buildRootMetadata({
+  verification: { google: "_7c1t_i-UsjS1_BD_kE-vsXMUak-mgMUnIT91dEUEQ4" },
+});
 
  
 
