@@ -39,7 +39,7 @@ export default async function NewsPage({ searchParams }: { searchParams: Promise
 
   const popularNews = latestSorted.slice(0, 3).map((post) => ({
     title: post.fields.title,
-    img: post.fields.featuredImage?.fields.file.url,
+    img: post.fields.featuredImage?.fields?.file?.url,
     badge: post.fields.category,
     desc: post.fields.content,
   }));

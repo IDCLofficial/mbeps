@@ -28,11 +28,11 @@ export default function LatestNews({newsList}: {newsList: NewsPost[]}) {
           <Link href={`/news/${item.fields.title}`} key={idx} className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden flex flex-col
           hover:scale-105 transition-all duration-300 cursor-pointer">
             <div className="relative w-full h-[140px] md:h-[240px]">
-              <Image src={`https:${item.fields.featuredImage?.fields.file.url}`} alt={item.fields.title} width={500} height={500} className="object-cover h-full w-full" />
+              {item.fields.featuredImage?.fields?.file?.url ? <Image src={`https:${item.fields.featuredImage.fields.file.url}`} alt={item.fields.title} width={500} height={500} className="object-cover h-full w-full" /> : <div className="h-full w-full bg-gray-200" />}
             </div>
             <div className="w-full p-4 md:p-5 flex-1 flex flex-col">
               <h3 className="text-dark-secondary text-xs md:text-[15px] font-bold mb-2 uppercase leading-snug">{item.fields.title}</h3>
-              <p className="text-gray-700 text-base mb-2 md:mb-4">{item.fields.content.content[0].content[0].value}</p>
+              <p className="text-gray-700 text-base mb-2 md:mb-4">{item.fields.content?.content?.[0]?.content?.[0]?.value ?? ""}</p>
               <span className="text-xs md:text-[15px] font-bold text-gray-900 mt-auto">{item.sys.createdAt}</span>
             </div>
           </Link>

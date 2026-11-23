@@ -9,7 +9,7 @@ type Category = { key: string; name: string; count: number };
 type Popular = {
   title: string;
   img?: string;
-  badge: { fields: { category_name: string } };
+  badge?: { fields?: { category_name?: string } };
   desc: unknown;
 };
 
@@ -81,11 +81,11 @@ export default function NewsSidebar({
             <li key={idx} className="flex gap-2 md:gap-3 items-center">
               <Link href={`/news/${news.title}`} className="flex gap-2 md:gap-3 items-center">
                 <div className="w-[50px] h-[50px] relative rounded overflow-hidden flex-shrink-0">
-                  <Image src={`https:${news.img}` || ""} alt={news.title} width={100} height={100} className="object-cover w-full h-full" />
+                  {news.img ? <Image src={news.img.startsWith("//") ? `https:${news.img}` : news.img} alt={news.title} width={100} height={100} className="object-cover w-full h-full" /> : <div className="w-full h-full bg-gray-200" />}
                 </div>
                 <div>
                   <div className="text-xs md:text-[14px] font-medium leading-tight line-clamp-2">{news.title}</div>
-                  <div className="text-[10px] text-gray-500 mt-1">{news.badge.fields.category_name}</div>
+                  <div className="text-[10px] text-gray-500 mt-1">{news.badge?.fields?.category_name}</div>
                 </div>
               </Link>
             </li>
